@@ -1,0 +1,13 @@
+{
+  "name": "activity-log",
+  "description": "something",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tahmid Uddin",
+  "license": "MIT",
+  "homepage": "https://github.com/Network-Rail-Business-Systems/activity-log#readme",
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
+}
