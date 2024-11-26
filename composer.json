@@ -1,6 +1,6 @@
 {
     "name": "networkrailbusinesssystems/activity-log",
-    "description": "A library that contains the common activity log components supporting our GovUk systems",
+    "description": "Contains the common activity log components supporting our GOV.UK systems",
     "type": "library",
     "homepage": "https://github.com/Network-Rail-Business-Systems/activity-log",
     "license": "MIT",
