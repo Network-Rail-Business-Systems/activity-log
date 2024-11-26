@@ -9,4 +9,4 @@
 Use the Activity Log library to add common activity log components for GOV.UK systems
 
 ## Installation
-Via Composer: `composer require networkrailbusinesssystems/support-page`
+Via Composer: `composer require networkrailbusinesssystems/activity-log`
