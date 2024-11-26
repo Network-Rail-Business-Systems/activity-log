@@ -1,6 +1,6 @@
 {
     "name": "networkrailbusinesssystems/activity-log",
-    "description": "Ahhhhh",
+    "description": "A library for documenting the activity log of a system",
     "type": "library",
     "homepage": "https://github.com/Network-Rail-Business-Systems/activity-log",
     "license": "MIT",

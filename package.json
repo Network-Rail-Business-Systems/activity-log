@@ -1,6 +1,6 @@
 {
   "name": "activity-log",
-  "description": "something",
+  "description": "A library for documenting the activity log of a system",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "badges": "php vendor/networkrailbusinesssystems/badges/badges.php",
