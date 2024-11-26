@@ -1,6 +1,6 @@
 {
     "name": "networkrailbusinesssystems/activity-log",
-    "description": "Ahhhhh",
+    "description": "Common activity log components for GOV.UK systems",
     "type": "library",
     "homepage": "https://github.com/Network-Rail-Business-Systems/activity-log",
     "license": "MIT",
