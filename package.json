@@ -1,6 +1,6 @@
 {
   "name": "activity-log",
-  "description": "Common activity log components supporting our GOV.UK systems",
+  "description": "Common activity log components for GOV.UK systems",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "badges": "php vendor/networkrailbusinesssystems/badges/badges.php",
