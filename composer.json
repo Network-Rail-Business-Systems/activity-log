@@ -1,0 +1,47 @@
+{
+    "name": "networkrailbusinesssystems/activity-log",
+    "description": "Ahhhhh",
+    "type": "library",
+    "homepage": "https://github.com/Network-Rail-Business-Systems/activity-log",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "NetworkRailBusinessSystems\\ActivityLog\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NetworkRailBusinessSystems\\ActivityLog\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NetworkRailBusinessSystems\\ActivityLog\\ActivityLogServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Calum Gray",
+            "email": "calum.gray@networkrail.co.uk"
+        },
+        {
+            "name": "Tahmid Uddin",
+            "email": "tahmid.uddin@networkrail.co.uk"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.3",
+        "illuminate/support": "^11",
+        "spatie/laravel-activitylog": "^4"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "prefer-stable": true,
+    "require-dev": {
+        "orchestra/testbench": "^9"
+    }
+}
