@@ -1,6 +1,6 @@
 <?php
 
-namespace NetworkRailBusinessSystems\ActivityLog\Tests\Unit;
+namespace NetworkRailBusinessSystems\ActivityLog\Tests\Unit\User;
 
 use Illuminate\Contracts\View\View;
 use NetworkRailBusinessSystems\ActivityLog\ActivityCollection;
