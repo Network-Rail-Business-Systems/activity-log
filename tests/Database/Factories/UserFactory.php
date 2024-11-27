@@ -5,11 +5,12 @@ namespace NetworkRailBusinessSystems\ActivityLog\Tests\Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use NetworkRailBusinessSystems\ActivityLog\Tests\Models\User;
 
-abstract class UserFactory extends Factory {
-
+abstract class UserFactory extends Factory
+{
     protected $model = User::class;
 
-    public function definition() {
+    public function definition()
+    {
         return [
             'name' => $this->faker->name(),
         ];

@@ -7,7 +7,6 @@ use NetworkRailBusinessSystems\ActivityLog\ActivityHelper;
 use NetworkRailBusinessSystems\ActivityLog\Tests\Models\User;
 use NetworkRailBusinessSystems\ActivityLog\Tests\TestCase;
 
-
 class LogStateTest extends TestCase
 {
     protected Activity $activity;

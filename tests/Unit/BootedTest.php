@@ -6,7 +6,6 @@ use NetworkRailBusinessSystems\ActivityLog\Activity;
 use NetworkRailBusinessSystems\ActivityLog\Tests\Models\User;
 use NetworkRailBusinessSystems\ActivityLog\Tests\TestCase;
 
-
 class BootedTest extends TestCase
 {
     protected User $user;
