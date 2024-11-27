@@ -6,7 +6,7 @@ use Illuminate\Contracts\View\View;
 use NetworkRailBusinessSystems\ActivityLog\ActivityCollection;
 use NetworkRailBusinessSystems\ActivityLog\ActivityController;
 use NetworkRailBusinessSystems\ActivityLog\Tests\Models\User;
-use Orchestra\Testbench\TestCase;
+use NetworkRailBusinessSystems\ActivityLog\Tests\TestCase;
 
 class ActionsTest extends TestCase
 {

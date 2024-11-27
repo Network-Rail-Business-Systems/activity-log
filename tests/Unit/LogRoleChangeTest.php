@@ -5,7 +5,7 @@ namespace NetworkRailBusinessSystems\ActivityLog\Tests\Unit;
 use NetworkRailBusinessSystems\ActivityLog\Activity;
 use NetworkRailBusinessSystems\ActivityLog\ActivityHelper;
 use NetworkRailBusinessSystems\ActivityLog\Tests\Models\User;
-use Orchestra\Testbench\TestCase;
+use NetworkRailBusinessSystems\ActivityLog\Tests\TestCase;
 
 class LogRoleChangeTest extends TestCase
 {
