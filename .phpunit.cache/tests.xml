@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="/home/calum/projects/activity-log/phpunit.xml" tests="26" assertions="0" errors="26" failures="0" skipped="0" time="0.000000">
+    <testsuite name="Unit" tests="26" assertions="0" errors="26" failures="0" skipped="0" time="0.000000">
+      <testsuite name="NetworkRailBusinessSystems\ActivityLog\Tests\ActionsTest" file="/home/calum/projects/activity-log/tests/ActionsTest.php" tests="6" assertions="0" errors="6" failures="0" skipped="0" time="0.000000">
+        <testcase name="testReturnsView" file="/home/calum/projects/activity-log/tests/ActionsTest.php" line="32" class="NetworkRailBusinessSystems\ActivityLog\Tests\ActionsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.ActionsTest" assertions="0" time="0.000000">
+          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\ActionsTest::testReturnsView
+Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
+/home/calum/projects/activity-log/tests/ActionsTest.php:21</error>
+        </testcase>
+        <testcase name="testWithActivities" file="/home/calum/projects/activity-log/tests/ActionsTest.php" line="37" class="NetworkRailBusinessSystems\ActivityLog\Tests\ActionsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.ActionsTest" assertions="0" time="0.000000">
+          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\ActionsTest::testWithActivities
+Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
+/home/calum/projects/activity-log/tests/ActionsTest.php:21</error>
+        </testcase>
+        <testcase name="testWithBack" file="/home/calum/projects/activity-log/tests/ActionsTest.php" line="47" class="NetworkRailBusinessSystems\ActivityLog\Tests\ActionsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.ActionsTest" assertions="0" time="0.000000">
+          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\ActionsTest::testWithBack
+Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
+/home/calum/projects/activity-log/tests/ActionsTest.php:21</error>
+        </testcase>
+        <testcase name="testWithShowSubject" file="/home/calum/projects/activity-log/tests/ActionsTest.php" line="52" class="NetworkRailBusinessSystems\ActivityLog\Tests\ActionsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.ActionsTest" assertions="0" time="0.000000">
+          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\ActionsTest::testWithShowSubject
+Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
+/home/calum/projects/activity-log/tests/ActionsTest.php:21</error>
+        </testcase>
+        <testcase name="testWithSubject" file="/home/calum/projects/activity-log/tests/ActionsTest.php" line="57" class="NetworkRailBusinessSystems\ActivityLog\Tests\ActionsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.ActionsTest" assertions="0" time="0.000000">
+          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\ActionsTest::testWithSubject
+Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
+/home/calum/projects/activity-log/tests/ActionsTest.php:21</error>
+        </testcase>
+        <testcase name="testWithTitle" file="/home/calum/projects/activity-log/tests/ActionsTest.php" line="62" class="NetworkRailBusinessSystems\ActivityLog\Tests\ActionsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.ActionsTest" assertions="0" time="0.000000">
+          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\ActionsTest::testWithTitle
+Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
+/home/calum/projects/activity-log/tests/ActionsTest.php:21</error>
+        </testcase>
+      </testsuite>
+      <testsuite name="NetworkRailBusinessSystems\ActivityLog\Tests\BootedTest" file="/home/calum/projects/activity-log/tests/BootedTest.php" tests="1" assertions="0" errors="1" failures="0" skipped="0" time="0.000000">
+        <testcase name="testOrdersByNewest" file="/home/calum/projects/activity-log/tests/BootedTest.php" line="25" class="NetworkRailBusinessSystems\ActivityLog\Tests\BootedTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.BootedTest" assertions="0" time="0.000000">
+          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\BootedTest::testOrdersByNewest
+Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
+/home/calum/projects/activity-log/tests/BootedTest.php:15</error>
+        </testcase>
+      </testsuite>
+      <testsuite name="NetworkRailBusinessSystems\ActivityLog\Tests\FormatRecipientsTest" file="/home/calum/projects/activity-log/tests/FormatRecipientsTest.php" tests="5" assertions="0" errors="5" failures="0" skipped="0" time="0.000000">
+        <testcase name="testReturnsNoneWhenEmpty" file="/home/calum/projects/activity-log/tests/FormatRecipientsTest.php" line="11" class="NetworkRailBusinessSystems\ActivityLog\Tests\FormatRecipientsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.FormatRecipientsTest" assertions="0" time="0.000000">
+          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\FormatRecipientsTest::testReturnsNoneWhenEmpty
+Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44</error>
+        </testcase>
+        <testcase name="testReturnsRecipient" file="/home/calum/projects/activity-log/tests/FormatRecipientsTest.php" line="16" class="NetworkRailBusinessSystems\ActivityLog\Tests\FormatRecipientsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.FormatRecipientsTest" assertions="0" time="0.000000">
+          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\FormatRecipientsTest::testReturnsRecipient
+Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44</error>
+        </testcase>
+        <testcase name="testReturnsRecipientsWhenArray" file="/home/calum/projects/activity-log/tests/FormatRecipientsTest.php" line="21" class="NetworkRailBusinessSystems\ActivityLog\Tests\FormatRecipientsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.FormatRecipientsTest" assertions="0" time="0.000000">
+          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\FormatRecipientsTest::testReturnsRecipientsWhenArray
+Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44</error>
+        </testcase>
+        <testcase name="testReturnsRecipientsWhenArrayOfArrays" file="/home/calum/projects/activity-log/tests/FormatRecipientsTest.php" line="32" class="NetworkRailBusinessSystems\ActivityLog\Tests\FormatRecipientsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.FormatRecipientsTest" assertions="0" time="0.000000">
+          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\FormatRecipientsTest::testReturnsRecipientsWhenArrayOfArrays
+Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44</error>
+        </testcase>
+        <testcase name="testReturnsRecipientsWhenCollection" file="/home/calum/projects/activity-log/tests/FormatRecipientsTest.php" line="49" class="NetworkRailBusinessSystems\ActivityLog\Tests\FormatRecipientsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.FormatRecipientsTest" assertions="0" time="0.000000">
+          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\FormatRecipientsTest::testReturnsRecipientsWhenCollection
+Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44</error>
+        </testcase>
+      </testsuite>
+      <testsuite name="NetworkRailBusinessSystems\ActivityLog\Tests\LogNotificationTest" file="/home/calum/projects/activity-log/tests/LogNotificationTest.php" tests="4" assertions="0" errors="4" failures="0" skipped="0" time="0.000000">
+        <testcase name="testLogsStatus" file="/home/calum/projects/activity-log/tests/LogNotificationTest.php" line="36" class="NetworkRailBusinessSystems\ActivityLog\Tests\LogNotificationTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.LogNotificationTest" assertions="0" time="0.000000">
+          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\LogNotificationTest::testLogsStatus
+Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
+/home/calum/projects/activity-log/tests/LogNotificationTest.php:18</error>
+        </testcase>
+        <testcase name="testRecordsToRecipients" file="/home/calum/projects/activity-log/tests/LogNotificationTest.php" line="45" class="NetworkRailBusinessSystems\ActivityLog\Tests\LogNotificationTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.LogNotificationTest" assertions="0" time="0.000000">
+          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\LogNotificationTest::testRecordsToRecipients
+Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
+/home/calum/projects/activity-log/tests/LogNotificationTest.php:18</error>
+        </testcase>
+        <testcase name="testRecordsCcRecipients" file="/home/calum/projects/activity-log/tests/LogNotificationTest.php" line="53" class="NetworkRailBusinessSystems\ActivityLog\Tests\LogNotificationTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.LogNotificationTest" assertions="0" time="0.000000">
+          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\LogNotificationTest::testRecordsCcRecipients
+Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
+/home/calum/projects/activity-log/tests/LogNotificationTest.php:18</error>
+        </testcase>
+        <testcase name="testDoesntWhenCcEmpty" file="/home/calum/projects/activity-log/tests/LogNotificationTest.php" line="61" class="NetworkRailBusinessSystems\ActivityLog\Tests\LogNotificationTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.LogNotificationTest" assertions="0" time="0.000000">
+          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\LogNotificationTest::testDoesntWhenCcEmpty
+Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
+/home/calum/projects/activity-log/tests/LogNotificationTest.php:18</error>
+        </testcase>
+      </testsuite>
+      <testsuite name="NetworkRailBusinessSystems\ActivityLog\Tests\LogRoleChangeTest" file="/home/calum/projects/activity-log/tests/LogRoleChangeTest.php" tests="1" assertions="0" errors="1" failures="0" skipped="0" time="0.000000">
+        <testcase name="testLogsStatus" file="/home/calum/projects/activity-log/tests/LogRoleChangeTest.php" line="25" class="NetworkRailBusinessSystems\ActivityLog\Tests\LogRoleChangeTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.LogRoleChangeTest" assertions="0" time="0.000000">
+          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\LogRoleChangeTest::testLogsStatus
+Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
+/home/calum/projects/activity-log/tests/LogRoleChangeTest.php:18</error>
+        </testcase>
+      </testsuite>
+      <testsuite name="NetworkRailBusinessSystems\ActivityLog\Tests\LogStateTest" file="/home/calum/projects/activity-log/tests/LogStateTest.php" tests="3" assertions="0" errors="3" failures="0" skipped="0" time="0.000000">
+        <testcase name="testLogsStatus" file="/home/calum/projects/activity-log/tests/LogStateTest.php" line="25" class="NetworkRailBusinessSystems\ActivityLog\Tests\LogStateTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.LogStateTest" assertions="0" time="0.000000">
+          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\LogStateTest::testLogsStatus
+Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
+/home/calum/projects/activity-log/tests/LogStateTest.php:18</error>
+        </testcase>
+        <testcase name="testRecordsNewState" file="/home/calum/projects/activity-log/tests/LogStateTest.php" line="34" class="NetworkRailBusinessSystems\ActivityLog\Tests\LogStateTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.LogStateTest" assertions="0" time="0.000000">
+          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\LogStateTest::testRecordsNewState
+Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
+/home/calum/projects/activity-log/tests/LogStateTest.php:18</error>
+        </testcase>
+        <testcase name="testRecordsOldState" file="/home/calum/projects/activity-log/tests/LogStateTest.php" line="39" class="NetworkRailBusinessSystems\ActivityLog\Tests\LogStateTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.LogStateTest" assertions="0" time="0.000000">
+          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\LogStateTest::testRecordsOldState
+Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
+/home/calum/projects/activity-log/tests/LogStateTest.php:18</error>
+        </testcase>
+      </testsuite>
+      <testsuite name="NetworkRailBusinessSystems\ActivityLog\Tests\UserTest" file="/home/calum/projects/activity-log/tests/UserTest.php" tests="6" assertions="0" errors="6" failures="0" skipped="0" time="0.000000">
+        <testcase name="testReturnsView" file="/home/calum/projects/activity-log/tests/UserTest.php" line="31" class="NetworkRailBusinessSystems\ActivityLog\Tests\UserTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.UserTest" assertions="0" time="0.000000">
+          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\UserTest::testReturnsView
+Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
+/home/calum/projects/activity-log/tests/UserTest.php:21</error>
+        </testcase>
+        <testcase name="testWithActivities" file="/home/calum/projects/activity-log/tests/UserTest.php" line="36" class="NetworkRailBusinessSystems\ActivityLog\Tests\UserTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.UserTest" assertions="0" time="0.000000">
+          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\UserTest::testWithActivities
+Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
+/home/calum/projects/activity-log/tests/UserTest.php:21</error>
+        </testcase>
+        <testcase name="testWithBack" file="/home/calum/projects/activity-log/tests/UserTest.php" line="44" class="NetworkRailBusinessSystems\ActivityLog\Tests\UserTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.UserTest" assertions="0" time="0.000000">
+          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\UserTest::testWithBack
+Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
+/home/calum/projects/activity-log/tests/UserTest.php:21</error>
+        </testcase>
+        <testcase name="testWithShowSubject" file="/home/calum/projects/activity-log/tests/UserTest.php" line="49" class="NetworkRailBusinessSystems\ActivityLog\Tests\UserTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.UserTest" assertions="0" time="0.000000">
+          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\UserTest::testWithShowSubject
+Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
+/home/calum/projects/activity-log/tests/UserTest.php:21</error>
+        </testcase>
+        <testcase name="testWithSubject" file="/home/calum/projects/activity-log/tests/UserTest.php" line="54" class="NetworkRailBusinessSystems\ActivityLog\Tests\UserTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.UserTest" assertions="0" time="0.000000">
+          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\UserTest::testWithSubject
+Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
+/home/calum/projects/activity-log/tests/UserTest.php:21</error>
+        </testcase>
+        <testcase name="testWithTitle" file="/home/calum/projects/activity-log/tests/UserTest.php" line="59" class="NetworkRailBusinessSystems\ActivityLog\Tests\UserTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.UserTest" assertions="0" time="0.000000">
+          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\UserTest::testWithTitle
+Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
+/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
+/home/calum/projects/activity-log/tests/UserTest.php:21</error>
+        </testcase>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

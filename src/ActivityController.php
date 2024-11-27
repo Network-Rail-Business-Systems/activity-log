@@ -3,14 +3,13 @@
 namespace NetworkRailBusinessSystems\ActivityLog;
 
 use AnthonyEdmonds\GovukLaravel\Helpers\GovukPage;
-use App\Models\User;
 use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Model;
-use NetworkRailBusinessSystems\ActivityLog\ActivityCollection;
+use Illuminate\Routing\Controller;
 
 class ActivityController extends Controller
 {
-    public function actions(User $user): View
+    public function actions(Model $user): View //TODO Make User? Also install govuklaravel
     {
         $this->authorize('manage', $user);
 
@@ -29,13 +28,13 @@ class ActivityController extends Controller
             ->with('subject', $user);
     }
 
-    public function user(User $user): View
+    public function user(Model $user): View //TODO Make User?
     {
         return $this->view($user, 'name', 'admin.users.show');
     }
 
     /**
-     * @param  User  $subject
+     * @param  Model  $subject
      */
     protected function view(Model $subject, string $labelKey, string $back): View
     {

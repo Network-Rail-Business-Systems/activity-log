@@ -3,7 +3,6 @@
 namespace NetworkRailBusinessSystems\ActivityLog;
 
 use Illuminate\Http\Resources\Json\ResourceCollection;
-use NetworkRailBusinessSystems\ActivityLog\ActivityResource;
 
 class ActivityCollection extends ResourceCollection
 {
