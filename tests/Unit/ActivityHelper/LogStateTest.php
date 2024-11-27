@@ -1,6 +1,6 @@
 <?php
 
-namespace NetworkRailBusinessSystems\ActivityLog\Tests\Unit;
+namespace NetworkRailBusinessSystems\ActivityLog\Tests\Unit\ActivityHelper;
 
 use NetworkRailBusinessSystems\ActivityLog\Activity;
 use NetworkRailBusinessSystems\ActivityLog\ActivityHelper;
