@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use Spatie\Activitylog\Models\Activity as SpatieActivity;
 
 /**
- * @property ?Model $causer //TODO Make User?
+ * @property ?Model $causer //TODO use a mixin
  */
 class Activity extends SpatieActivity
 {
@@ -17,7 +17,7 @@ class Activity extends SpatieActivity
     protected $perPage = 10;
 
     // Setup
-    protected static function booted()
+    protected static function booted(): void
     {
         parent::booted();
 

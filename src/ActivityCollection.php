@@ -12,7 +12,7 @@ class ActivityCollection extends ResourceCollection
 
     public function toArray($request)
     {
-        $request->showSubject = $this->showSubject;
+        $request->showSubject = $this->showSubject; //TODO
 
         return parent::toArray($request);
     }

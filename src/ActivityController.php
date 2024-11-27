@@ -7,9 +7,9 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Routing\Controller;
 
-class ActivityController extends Controller
+class ActivityController extends Controller //TODO
 {
-    public function actions(Model $user): View //TODO Make User? Also install govuklaravel
+    public function actions(Model $user): View //TODO change typehint to interface
     {
         $this->authorize('manage', $user);
 

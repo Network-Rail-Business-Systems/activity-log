@@ -26,7 +26,7 @@ class ActivityResource extends JsonResource
     {
         $label = ucfirst($this->description);
 
-        if ($request->showSubject === true) {
+        if ($request->showSubject === true) { //TODO
             switch ($this->event) {
                 case 'notification':
                     break;
