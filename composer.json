@@ -44,6 +44,7 @@
     "prefer-stable": true,
     "require-dev": {
         "anthonyedmonds/laravel-testing-traits": "^0",
+        "brianium/paratest": "^7",
         "larastan/larastan": "^2",
         "laravel/pint": "^1",
         "networkrailbusinesssystems/badges": "^1",
