@@ -14,13 +14,34 @@
     failOnRisky="true"
     failOnWarning="true"
 >
+    <coverage>
+        <report>
+            <text outputFile=".phpunit.cache/coverage.txt" showUncoveredFiles="false" showOnlySummary="true" />
+            <html outputDirectory=".phpunit.cache/html" />
+        </report>
+    </coverage>
+
+    <logging>
+        <junit outputFile=".phpunit.cache/tests.xml" />
+    </logging>
+
     <testsuites>
-        <testsuite name="default">
-            <directory>tests</directory>
+        <testsuite name="Unit">
+            <directory>./tests/Unit</directory>
         </testsuite>
     </testsuites>
 
-    <source ignoreIndirectDeprecations="true" restrictNotices="true" restrictWarnings="true">
+    <php>
+        <env name="APP_ENV" value="local"/>
+        <env name="APP_DEBUG" value="false"/>
+        <env name="CACHE_DRIVER" value="array"/>
+        <env name="SESSION_DRIVER" value="array"/>
+        <env name="QUEUE_DRIVER" value="sync"/>
+        <env name="DB_CONNECTION" value="sqlite"/>
+        <env name="DB_DATABASE" value=":memory:"/>
+    </php>
+
+    <source>
         <include>
             <directory>src</directory>
         </include>
