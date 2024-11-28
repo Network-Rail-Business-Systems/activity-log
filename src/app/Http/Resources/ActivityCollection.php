@@ -1,6 +1,6 @@
 <?php
 
-namespace NetworkRailBusinessSystems\ActivityLog;
+namespace NetworkRailBusinessSystems\ActivityLog\app\Http\Resources;
 
 use Illuminate\Http\Resources\Json\ResourceCollection;
 

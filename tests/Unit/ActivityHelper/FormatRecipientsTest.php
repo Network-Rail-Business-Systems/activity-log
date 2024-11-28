@@ -2,7 +2,7 @@
 
 namespace NetworkRailBusinessSystems\ActivityLog\Tests\Unit\ActivityHelper;
 
-use NetworkRailBusinessSystems\ActivityLog\ActivityHelper;
+use NetworkRailBusinessSystems\ActivityLog\app\Helpers\ActivityHelper;
 use NetworkRailBusinessSystems\ActivityLog\Tests\Models\User;
 use NetworkRailBusinessSystems\ActivityLog\Tests\TestCase;
 

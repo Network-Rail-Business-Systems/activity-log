@@ -1,6 +1,6 @@
 <?php
 
-namespace NetworkRailBusinessSystems\ActivityLog;
+namespace NetworkRailBusinessSystems\ActivityLog\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

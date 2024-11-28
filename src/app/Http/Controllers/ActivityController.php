@@ -1,11 +1,13 @@
 <?php
 
-namespace NetworkRailBusinessSystems\ActivityLog;
+
+namespace NetworkRailBusinessSystems\ActivityLog\app\Http\Controllers;
 
 use AnthonyEdmonds\GovukLaravel\Helpers\GovukPage;
 use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Routing\Controller;
+use NetworkRailBusinessSystems\ActivityLog\app\Http\Resources\ActivityCollection;
 
 class ActivityController extends Controller //TODO
 {
@@ -34,13 +36,13 @@ class ActivityController extends Controller //TODO
     }
 
     /**
-     * @param  Model  $subject
+     * @param Model $subject
      */
     protected function view(Model $subject, string $labelKey, string $back): View
     {
         $this->authorize('manage', $subject);
 
-        $activities = ActivityCollection::make(
+        $activities = \NetworkRailBusinessSystems\ActivityLog\ActivityCollection::make(
             $subject
                 ->activities()
                 ->with(['causer', 'subject'])
