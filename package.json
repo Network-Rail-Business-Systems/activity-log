@@ -2,7 +2,8 @@
   "name": "activity-log",
   "description": "Common activity log components for GOV.UK systems",
   "scripts": {
-    "test": "vendor/bin/phpunit",
+    "test-slow": "php vendor/bin/phpunit",
+    "test": "php vendor/bin/paratest",
     "badges": "php vendor/networkrailbusinesssystems/badges/badges.php",
     "larastan": "php vendor/bin/phpstan analyse --memory-limit 512M",
     "pint": "php ./vendor/bin/pint --preset=per",
@@ -12,6 +13,6 @@
   "license": "MIT",
   "homepage": "https://github.com/Network-Rail-Business-Systems/activity-log#readme",
   "devDependencies": {
-    "husky": "^9"
+    "husky": "^9.1.7"
   }
 }
