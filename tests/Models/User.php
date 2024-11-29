@@ -27,5 +27,4 @@ class User extends Model
     {
         return new UserFactory();
     }
-
 }
