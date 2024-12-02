@@ -17,7 +17,7 @@ class ActivityFactory extends Factory
         ];
     }
 
-    public function forSubject(Model $subject): Factory
+    public function forSubject(Model $subject): self
     {
         return $this->state([
             'subject_id' => $subject->id,

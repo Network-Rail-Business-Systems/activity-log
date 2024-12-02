@@ -1,8 +1,9 @@
 <?php
 
-namespace NetworkRailBusinessSystems\ActivityLog\Tests\Unit;
+namespace NetworkRailBusinessSystems\ActivityLog\Tests\Unit\ActivityController;
 
 use Illuminate\Contracts\View\View;
+use Illuminate\Database\Eloquent\Model;
 use NetworkRailBusinessSystems\ActivityLog\ActivityCollection;
 use NetworkRailBusinessSystems\ActivityLog\ActivityController;
 use NetworkRailBusinessSystems\ActivityLog\Tests\Models\User;
@@ -12,7 +13,7 @@ class ActionsTest extends TestCase
 {
     protected ActivityController $controller;
 
-    protected User $user;
+    protected User|Model $user;
 
     protected View $response;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace NetworkRailBusinessSystems\ActivityLog\Tests\Unit;
+namespace NetworkRailBusinessSystems\ActivityLog\Tests\Unit\Activity;
 
 use NetworkRailBusinessSystems\ActivityLog\Activity;
 use NetworkRailBusinessSystems\ActivityLog\Tests\Models\User;

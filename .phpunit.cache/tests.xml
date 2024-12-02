@@ -1,276 +1,487 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites>
-  <testsuite name="/home/calum/projects/activity-log/phpunit.xml" tests="26" assertions="0" errors="26" failures="0" skipped="0" time="0.000000">
-    <testsuite name="Unit" tests="26" assertions="0" errors="26" failures="0" skipped="0" time="0.000000">
-      <testsuite name="NetworkRailBusinessSystems\ActivityLog\Tests\ActionsTest" file="/home/calum/projects/activity-log/tests/ActionsTest.php" tests="6" assertions="0" errors="6" failures="0" skipped="0" time="0.000000">
-        <testcase name="testReturnsView" file="/home/calum/projects/activity-log/tests/ActionsTest.php" line="32" class="NetworkRailBusinessSystems\ActivityLog\Tests\ActionsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.ActionsTest" assertions="0" time="0.000000">
-          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\ActionsTest::testReturnsView
-Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+<testsuites name="PHPUnit tests">
+  <testsuite name="" tests="26" assertions="4" errors="22" failures="0" skipped="0" time="0.129097">
+    <testsuite name="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\ActionsTest" file="/home/anthony/projects/activity-log/tests/Unit/ActionsTest.php" tests="6" assertions="0" errors="6" failures="0" skipped="0" time="0">
+      <testcase name="testReturnsView" class="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\ActionsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.Unit.ActionsTest" file="/home/anthony/projects/activity-log/tests/Unit/ActionsTest.php" line="33" assertions="0" time="0.000000">
+        <error type="Illuminate\Database\QueryException">NetworkRailBusinessSystems\ActivityLog\Tests\Unit\ActionsTest::testReturnsView
+Illuminate\Database\QueryException: SQLSTATE[HY000]: General error: 1 no such table: users (Connection: testing, SQL: insert into "users" ("name", "email", "email_verified_at", "password", "remember_token", "updated_at", "created_at") values (Mr. Ward Hudson, junior.senger@example.org, 2024-11-27 12:32:36, $2y$10$DRaCvI3lCRk8tFmawcVEPOJ8TQKhY98IUYkvDORL3RguMWZv9zH4q, OjweBfaWiR, 2024-11-27 12:32:36, 2024-11-27 12:32:36))
 
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
-/home/calum/projects/activity-log/tests/ActionsTest.php:21</error>
-        </testcase>
-        <testcase name="testWithActivities" file="/home/calum/projects/activity-log/tests/ActionsTest.php" line="37" class="NetworkRailBusinessSystems\ActivityLog\Tests\ActionsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.ActionsTest" assertions="0" time="0.000000">
-          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\ActionsTest::testWithActivities
-Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:779
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:560
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:524
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php:32
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:3799
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:2049
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1358
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1323
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1162
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:349
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:257
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:344
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:298
+/home/anthony/projects/activity-log/vendor/anthonyedmonds/laravel-testing-traits/src/SignsInUsers.php:15
+/home/anthony/projects/activity-log/vendor/anthonyedmonds/laravel-testing-traits/src/SignsInUsers.php:35
+/home/anthony/projects/activity-log/tests/Unit/ActionsTest.php:24</error>
+      </testcase>
+      <testcase name="testWithActivities" class="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\ActionsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.Unit.ActionsTest" file="/home/anthony/projects/activity-log/tests/Unit/ActionsTest.php" line="38" assertions="0" time="0.000000">
+        <error type="Illuminate\Database\QueryException">NetworkRailBusinessSystems\ActivityLog\Tests\Unit\ActionsTest::testWithActivities
+Illuminate\Database\QueryException: SQLSTATE[HY000]: General error: 1 no such table: users (Connection: testing, SQL: insert into "users" ("name", "email", "email_verified_at", "password", "remember_token", "updated_at", "created_at") values (Marcos Rath, micah25@example.org, 2024-11-27 12:32:36, $2y$10$DRaCvI3lCRk8tFmawcVEPOJ8TQKhY98IUYkvDORL3RguMWZv9zH4q, rIZfvNUQQd, 2024-11-27 12:32:36, 2024-11-27 12:32:36))
 
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
-/home/calum/projects/activity-log/tests/ActionsTest.php:21</error>
-        </testcase>
-        <testcase name="testWithBack" file="/home/calum/projects/activity-log/tests/ActionsTest.php" line="47" class="NetworkRailBusinessSystems\ActivityLog\Tests\ActionsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.ActionsTest" assertions="0" time="0.000000">
-          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\ActionsTest::testWithBack
-Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:779
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:560
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:524
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php:32
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:3799
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:2049
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1358
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1323
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1162
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:349
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:257
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:344
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:298
+/home/anthony/projects/activity-log/vendor/anthonyedmonds/laravel-testing-traits/src/SignsInUsers.php:15
+/home/anthony/projects/activity-log/vendor/anthonyedmonds/laravel-testing-traits/src/SignsInUsers.php:35
+/home/anthony/projects/activity-log/tests/Unit/ActionsTest.php:24</error>
+      </testcase>
+      <testcase name="testWithBack" class="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\ActionsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.Unit.ActionsTest" file="/home/anthony/projects/activity-log/tests/Unit/ActionsTest.php" line="48" assertions="0" time="0.000000">
+        <error type="Illuminate\Database\QueryException">NetworkRailBusinessSystems\ActivityLog\Tests\Unit\ActionsTest::testWithBack
+Illuminate\Database\QueryException: SQLSTATE[HY000]: General error: 1 no such table: users (Connection: testing, SQL: insert into "users" ("name", "email", "email_verified_at", "password", "remember_token", "updated_at", "created_at") values (Prof. Diamond Runolfsson, xorn@example.net, 2024-11-27 12:32:36, $2y$10$DRaCvI3lCRk8tFmawcVEPOJ8TQKhY98IUYkvDORL3RguMWZv9zH4q, 0CsoqZtNr2, 2024-11-27 12:32:36, 2024-11-27 12:32:36))
 
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
-/home/calum/projects/activity-log/tests/ActionsTest.php:21</error>
-        </testcase>
-        <testcase name="testWithShowSubject" file="/home/calum/projects/activity-log/tests/ActionsTest.php" line="52" class="NetworkRailBusinessSystems\ActivityLog\Tests\ActionsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.ActionsTest" assertions="0" time="0.000000">
-          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\ActionsTest::testWithShowSubject
-Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:779
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:560
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:524
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php:32
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:3799
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:2049
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1358
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1323
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1162
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:349
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:257
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:344
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:298
+/home/anthony/projects/activity-log/vendor/anthonyedmonds/laravel-testing-traits/src/SignsInUsers.php:15
+/home/anthony/projects/activity-log/vendor/anthonyedmonds/laravel-testing-traits/src/SignsInUsers.php:35
+/home/anthony/projects/activity-log/tests/Unit/ActionsTest.php:24</error>
+      </testcase>
+      <testcase name="testWithShowSubject" class="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\ActionsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.Unit.ActionsTest" file="/home/anthony/projects/activity-log/tests/Unit/ActionsTest.php" line="53" assertions="0" time="0.000000">
+        <error type="Illuminate\Database\QueryException">NetworkRailBusinessSystems\ActivityLog\Tests\Unit\ActionsTest::testWithShowSubject
+Illuminate\Database\QueryException: SQLSTATE[HY000]: General error: 1 no such table: users (Connection: testing, SQL: insert into "users" ("name", "email", "email_verified_at", "password", "remember_token", "updated_at", "created_at") values (Bettie Brown, langosh.hiram@example.com, 2024-11-27 12:32:36, $2y$10$DRaCvI3lCRk8tFmawcVEPOJ8TQKhY98IUYkvDORL3RguMWZv9zH4q, QUoYchUVLg, 2024-11-27 12:32:36, 2024-11-27 12:32:36))
 
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
-/home/calum/projects/activity-log/tests/ActionsTest.php:21</error>
-        </testcase>
-        <testcase name="testWithSubject" file="/home/calum/projects/activity-log/tests/ActionsTest.php" line="57" class="NetworkRailBusinessSystems\ActivityLog\Tests\ActionsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.ActionsTest" assertions="0" time="0.000000">
-          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\ActionsTest::testWithSubject
-Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:779
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:560
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:524
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php:32
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:3799
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:2049
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1358
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1323
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1162
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:349
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:257
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:344
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:298
+/home/anthony/projects/activity-log/vendor/anthonyedmonds/laravel-testing-traits/src/SignsInUsers.php:15
+/home/anthony/projects/activity-log/vendor/anthonyedmonds/laravel-testing-traits/src/SignsInUsers.php:35
+/home/anthony/projects/activity-log/tests/Unit/ActionsTest.php:24</error>
+      </testcase>
+      <testcase name="testWithSubject" class="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\ActionsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.Unit.ActionsTest" file="/home/anthony/projects/activity-log/tests/Unit/ActionsTest.php" line="58" assertions="0" time="0.000000">
+        <error type="Illuminate\Database\QueryException">NetworkRailBusinessSystems\ActivityLog\Tests\Unit\ActionsTest::testWithSubject
+Illuminate\Database\QueryException: SQLSTATE[HY000]: General error: 1 no such table: users (Connection: testing, SQL: insert into "users" ("name", "email", "email_verified_at", "password", "remember_token", "updated_at", "created_at") values (Myles Padberg, roger00@example.net, 2024-11-27 12:32:36, $2y$10$DRaCvI3lCRk8tFmawcVEPOJ8TQKhY98IUYkvDORL3RguMWZv9zH4q, ACn4sGty2P, 2024-11-27 12:32:36, 2024-11-27 12:32:36))
 
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
-/home/calum/projects/activity-log/tests/ActionsTest.php:21</error>
-        </testcase>
-        <testcase name="testWithTitle" file="/home/calum/projects/activity-log/tests/ActionsTest.php" line="62" class="NetworkRailBusinessSystems\ActivityLog\Tests\ActionsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.ActionsTest" assertions="0" time="0.000000">
-          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\ActionsTest::testWithTitle
-Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:779
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:560
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:524
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php:32
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:3799
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:2049
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1358
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1323
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1162
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:349
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:257
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:344
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:298
+/home/anthony/projects/activity-log/vendor/anthonyedmonds/laravel-testing-traits/src/SignsInUsers.php:15
+/home/anthony/projects/activity-log/vendor/anthonyedmonds/laravel-testing-traits/src/SignsInUsers.php:35
+/home/anthony/projects/activity-log/tests/Unit/ActionsTest.php:24</error>
+      </testcase>
+      <testcase name="testWithTitle" class="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\ActionsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.Unit.ActionsTest" file="/home/anthony/projects/activity-log/tests/Unit/ActionsTest.php" line="63" assertions="0" time="0.000000">
+        <error type="Illuminate\Database\QueryException">NetworkRailBusinessSystems\ActivityLog\Tests\Unit\ActionsTest::testWithTitle
+Illuminate\Database\QueryException: SQLSTATE[HY000]: General error: 1 no such table: users (Connection: testing, SQL: insert into "users" ("name", "email", "email_verified_at", "password", "remember_token", "updated_at", "created_at") values (Lenny Nitzsche DVM, evans.mckenzie@example.com, 2024-11-27 12:32:36, $2y$10$DRaCvI3lCRk8tFmawcVEPOJ8TQKhY98IUYkvDORL3RguMWZv9zH4q, a4XvtYbtp6, 2024-11-27 12:32:36, 2024-11-27 12:32:36))
 
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
-/home/calum/projects/activity-log/tests/ActionsTest.php:21</error>
-        </testcase>
-      </testsuite>
-      <testsuite name="NetworkRailBusinessSystems\ActivityLog\Tests\BootedTest" file="/home/calum/projects/activity-log/tests/BootedTest.php" tests="1" assertions="0" errors="1" failures="0" skipped="0" time="0.000000">
-        <testcase name="testOrdersByNewest" file="/home/calum/projects/activity-log/tests/BootedTest.php" line="25" class="NetworkRailBusinessSystems\ActivityLog\Tests\BootedTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.BootedTest" assertions="0" time="0.000000">
-          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\BootedTest::testOrdersByNewest
-Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:779
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:560
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:524
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php:32
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:3799
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:2049
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1358
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1323
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1162
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:349
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:257
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:344
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:298
+/home/anthony/projects/activity-log/vendor/anthonyedmonds/laravel-testing-traits/src/SignsInUsers.php:15
+/home/anthony/projects/activity-log/vendor/anthonyedmonds/laravel-testing-traits/src/SignsInUsers.php:35
+/home/anthony/projects/activity-log/tests/Unit/ActionsTest.php:24</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\BootedTest" file="/home/anthony/projects/activity-log/tests/Unit/BootedTest.php" tests="1" assertions="0" errors="1" failures="0" skipped="0" time="0">
+      <testcase name="testOrdersByNewest" class="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\BootedTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.Unit.BootedTest" file="/home/anthony/projects/activity-log/tests/Unit/BootedTest.php" line="25" assertions="0" time="0.000000">
+        <error type="Illuminate\Database\QueryException">NetworkRailBusinessSystems\ActivityLog\Tests\Unit\BootedTest::testOrdersByNewest
+Illuminate\Database\QueryException: SQLSTATE[HY000]: General error: 1 no such table: users (Connection: testing, SQL: insert into "users" ("name", "email", "email_verified_at", "password", "remember_token", "updated_at", "created_at") values (Lila O'Reilly, berenice.ankunding@example.net, 2024-11-27 12:32:36, $2y$10$uOCSXrrHDyUSucIUhs8Wz.VTIZZKFqo7sLNmUjqDj6JmKIs/vHXZ., S3qi7v1mif, 2024-11-27 12:32:36, 2024-11-27 12:32:36))
 
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
-/home/calum/projects/activity-log/tests/BootedTest.php:15</error>
-        </testcase>
-      </testsuite>
-      <testsuite name="NetworkRailBusinessSystems\ActivityLog\Tests\FormatRecipientsTest" file="/home/calum/projects/activity-log/tests/FormatRecipientsTest.php" tests="5" assertions="0" errors="5" failures="0" skipped="0" time="0.000000">
-        <testcase name="testReturnsNoneWhenEmpty" file="/home/calum/projects/activity-log/tests/FormatRecipientsTest.php" line="11" class="NetworkRailBusinessSystems\ActivityLog\Tests\FormatRecipientsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.FormatRecipientsTest" assertions="0" time="0.000000">
-          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\FormatRecipientsTest::testReturnsNoneWhenEmpty
-Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:779
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:560
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:524
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php:32
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:3799
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:2049
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1358
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1323
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1162
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:349
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:257
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:344
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:298
+/home/anthony/projects/activity-log/tests/Unit/BootedTest.php:17</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\FormatRecipientsTest" file="/home/anthony/projects/activity-log/tests/Unit/FormatRecipientsTest.php" tests="5" assertions="4" errors="1" failures="0" skipped="0" time="0.129097">
+      <testcase name="testReturnsNoneWhenEmpty" class="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\FormatRecipientsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.Unit.FormatRecipientsTest" file="/home/anthony/projects/activity-log/tests/Unit/FormatRecipientsTest.php" line="11" assertions="1" time="0.055719"/>
+      <testcase name="testReturnsRecipient" class="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\FormatRecipientsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.Unit.FormatRecipientsTest" file="/home/anthony/projects/activity-log/tests/Unit/FormatRecipientsTest.php" line="16" assertions="1" time="0.004287"/>
+      <testcase name="testReturnsRecipientsWhenArray" class="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\FormatRecipientsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.Unit.FormatRecipientsTest" file="/home/anthony/projects/activity-log/tests/Unit/FormatRecipientsTest.php" line="21" assertions="1" time="0.003982"/>
+      <testcase name="testReturnsRecipientsWhenArrayOfArrays" class="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\FormatRecipientsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.Unit.FormatRecipientsTest" file="/home/anthony/projects/activity-log/tests/Unit/FormatRecipientsTest.php" line="32" assertions="1" time="0.004206"/>
+      <testcase name="testReturnsRecipientsWhenCollection" class="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\FormatRecipientsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.Unit.FormatRecipientsTest" file="/home/anthony/projects/activity-log/tests/Unit/FormatRecipientsTest.php" line="49" assertions="0" time="0.060904">
+        <error type="Illuminate\Database\QueryException">NetworkRailBusinessSystems\ActivityLog\Tests\Unit\FormatRecipientsTest::testReturnsRecipientsWhenCollection
+Illuminate\Database\QueryException: SQLSTATE[HY000]: General error: 1 no such table: users (Connection: testing, SQL: insert into "users" ("name", "email", "email_verified_at", "password", "remember_token", "updated_at", "created_at") values (Mr. Paolo Wisozk I, leta.kutch@example.org, 2024-11-27 12:32:36, $2y$10$Gn.wZmSpP3ipMBeuQ14YcOK7dQ1QbSIN7lG.LJC6nflv2J0EFcZuu, lluVqzsaEP, 2024-11-27 12:32:36, 2024-11-27 12:32:36))
 
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44</error>
-        </testcase>
-        <testcase name="testReturnsRecipient" file="/home/calum/projects/activity-log/tests/FormatRecipientsTest.php" line="16" class="NetworkRailBusinessSystems\ActivityLog\Tests\FormatRecipientsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.FormatRecipientsTest" assertions="0" time="0.000000">
-          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\FormatRecipientsTest::testReturnsRecipient
-Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:779
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:560
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:524
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php:32
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:3799
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:2049
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1358
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1323
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1162
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:349
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:257
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:344
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:302
+/home/anthony/projects/activity-log/tests/Unit/FormatRecipientsTest.php:53</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\LogNotificationTest" file="/home/anthony/projects/activity-log/tests/Unit/LogNotificationTest.php" tests="4" assertions="0" errors="4" failures="0" skipped="0" time="0">
+      <testcase name="testLogsStatus" class="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\LogNotificationTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.Unit.LogNotificationTest" file="/home/anthony/projects/activity-log/tests/Unit/LogNotificationTest.php" line="36" assertions="0" time="0.000000">
+        <error type="Illuminate\Database\QueryException">NetworkRailBusinessSystems\ActivityLog\Tests\Unit\LogNotificationTest::testLogsStatus
+Illuminate\Database\QueryException: SQLSTATE[HY000]: General error: 1 no such table: users (Connection: testing, SQL: insert into "users" ("name", "email", "email_verified_at", "password", "remember_token", "updated_at", "created_at") values (Junius Kub, santos.lind@example.com, 2024-11-27 12:32:36, $2y$10$gnUilUg7JSJuwi.4A/niPeit19kPBA1tDsygaOUPGdNNLVOnnUUau, 9MulQd5Ttc, 2024-11-27 12:32:36, 2024-11-27 12:32:36))
 
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44</error>
-        </testcase>
-        <testcase name="testReturnsRecipientsWhenArray" file="/home/calum/projects/activity-log/tests/FormatRecipientsTest.php" line="21" class="NetworkRailBusinessSystems\ActivityLog\Tests\FormatRecipientsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.FormatRecipientsTest" assertions="0" time="0.000000">
-          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\FormatRecipientsTest::testReturnsRecipientsWhenArray
-Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:779
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:560
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:524
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php:32
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:3799
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:2049
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1358
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1323
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1162
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:349
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:257
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:344
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:298
+/home/anthony/projects/activity-log/tests/Unit/LogNotificationTest.php:20</error>
+      </testcase>
+      <testcase name="testRecordsToRecipients" class="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\LogNotificationTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.Unit.LogNotificationTest" file="/home/anthony/projects/activity-log/tests/Unit/LogNotificationTest.php" line="45" assertions="0" time="0.000000">
+        <error type="Illuminate\Database\QueryException">NetworkRailBusinessSystems\ActivityLog\Tests\Unit\LogNotificationTest::testRecordsToRecipients
+Illuminate\Database\QueryException: SQLSTATE[HY000]: General error: 1 no such table: users (Connection: testing, SQL: insert into "users" ("name", "email", "email_verified_at", "password", "remember_token", "updated_at", "created_at") values (Reba Klocko, mueller.liliana@example.com, 2024-11-27 12:32:36, $2y$10$gnUilUg7JSJuwi.4A/niPeit19kPBA1tDsygaOUPGdNNLVOnnUUau, I3SJNkwzSH, 2024-11-27 12:32:36, 2024-11-27 12:32:36))
 
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44</error>
-        </testcase>
-        <testcase name="testReturnsRecipientsWhenArrayOfArrays" file="/home/calum/projects/activity-log/tests/FormatRecipientsTest.php" line="32" class="NetworkRailBusinessSystems\ActivityLog\Tests\FormatRecipientsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.FormatRecipientsTest" assertions="0" time="0.000000">
-          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\FormatRecipientsTest::testReturnsRecipientsWhenArrayOfArrays
-Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:779
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:560
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:524
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php:32
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:3799
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:2049
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1358
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1323
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1162
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:349
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:257
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:344
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:298
+/home/anthony/projects/activity-log/tests/Unit/LogNotificationTest.php:20</error>
+      </testcase>
+      <testcase name="testRecordsCcRecipients" class="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\LogNotificationTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.Unit.LogNotificationTest" file="/home/anthony/projects/activity-log/tests/Unit/LogNotificationTest.php" line="53" assertions="0" time="0.000000">
+        <error type="Illuminate\Database\QueryException">NetworkRailBusinessSystems\ActivityLog\Tests\Unit\LogNotificationTest::testRecordsCcRecipients
+Illuminate\Database\QueryException: SQLSTATE[HY000]: General error: 1 no such table: users (Connection: testing, SQL: insert into "users" ("name", "email", "email_verified_at", "password", "remember_token", "updated_at", "created_at") values (Kieran Okuneva, hermann.cesar@example.org, 2024-11-27 12:32:36, $2y$10$gnUilUg7JSJuwi.4A/niPeit19kPBA1tDsygaOUPGdNNLVOnnUUau, agbrB00o2a, 2024-11-27 12:32:36, 2024-11-27 12:32:36))
 
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44</error>
-        </testcase>
-        <testcase name="testReturnsRecipientsWhenCollection" file="/home/calum/projects/activity-log/tests/FormatRecipientsTest.php" line="49" class="NetworkRailBusinessSystems\ActivityLog\Tests\FormatRecipientsTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.FormatRecipientsTest" assertions="0" time="0.000000">
-          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\FormatRecipientsTest::testReturnsRecipientsWhenCollection
-Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:779
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:560
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:524
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php:32
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:3799
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:2049
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1358
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1323
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1162
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:349
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:257
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:344
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:298
+/home/anthony/projects/activity-log/tests/Unit/LogNotificationTest.php:20</error>
+      </testcase>
+      <testcase name="testDoesntWhenCcEmpty" class="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\LogNotificationTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.Unit.LogNotificationTest" file="/home/anthony/projects/activity-log/tests/Unit/LogNotificationTest.php" line="61" assertions="0" time="0.000000">
+        <error type="Illuminate\Database\QueryException">NetworkRailBusinessSystems\ActivityLog\Tests\Unit\LogNotificationTest::testDoesntWhenCcEmpty
+Illuminate\Database\QueryException: SQLSTATE[HY000]: General error: 1 no such table: users (Connection: testing, SQL: insert into "users" ("name", "email", "email_verified_at", "password", "remember_token", "updated_at", "created_at") values (Carmella Nolan, macy.kshlerin@example.org, 2024-11-27 12:32:36, $2y$10$gnUilUg7JSJuwi.4A/niPeit19kPBA1tDsygaOUPGdNNLVOnnUUau, hR6k9wLqfb, 2024-11-27 12:32:36, 2024-11-27 12:32:36))
 
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44</error>
-        </testcase>
-      </testsuite>
-      <testsuite name="NetworkRailBusinessSystems\ActivityLog\Tests\LogNotificationTest" file="/home/calum/projects/activity-log/tests/LogNotificationTest.php" tests="4" assertions="0" errors="4" failures="0" skipped="0" time="0.000000">
-        <testcase name="testLogsStatus" file="/home/calum/projects/activity-log/tests/LogNotificationTest.php" line="36" class="NetworkRailBusinessSystems\ActivityLog\Tests\LogNotificationTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.LogNotificationTest" assertions="0" time="0.000000">
-          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\LogNotificationTest::testLogsStatus
-Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:779
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:560
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:524
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php:32
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:3799
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:2049
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1358
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1323
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1162
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:349
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:257
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:344
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:298
+/home/anthony/projects/activity-log/tests/Unit/LogNotificationTest.php:20</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\LogRoleChangeTest" file="/home/anthony/projects/activity-log/tests/Unit/LogRoleChangeTest.php" tests="1" assertions="0" errors="1" failures="0" skipped="0" time="0">
+      <testcase name="testLogsStatus" class="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\LogRoleChangeTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.Unit.LogRoleChangeTest" file="/home/anthony/projects/activity-log/tests/Unit/LogRoleChangeTest.php" line="25" assertions="0" time="0.000000">
+        <error type="Illuminate\Database\QueryException">NetworkRailBusinessSystems\ActivityLog\Tests\Unit\LogRoleChangeTest::testLogsStatus
+Illuminate\Database\QueryException: SQLSTATE[HY000]: General error: 1 no such table: users (Connection: testing, SQL: insert into "users" ("name", "email", "email_verified_at", "password", "remember_token", "updated_at", "created_at") values (Ms. Emelie Kiehn V, yazmin.huels@example.org, 2024-11-27 12:32:36, $2y$10$m5JEpUL2vSFWK6F9EoJUp.EXT.kCU2/gdrjWxN.TvR.epw3.O6GOu, RqETWnv2Ix, 2024-11-27 12:32:36, 2024-11-27 12:32:36))
 
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
-/home/calum/projects/activity-log/tests/LogNotificationTest.php:18</error>
-        </testcase>
-        <testcase name="testRecordsToRecipients" file="/home/calum/projects/activity-log/tests/LogNotificationTest.php" line="45" class="NetworkRailBusinessSystems\ActivityLog\Tests\LogNotificationTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.LogNotificationTest" assertions="0" time="0.000000">
-          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\LogNotificationTest::testRecordsToRecipients
-Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:779
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:560
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:524
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php:32
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:3799
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:2049
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1358
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1323
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1162
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:349
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:257
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:344
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:298
+/home/anthony/projects/activity-log/tests/Unit/LogRoleChangeTest.php:20</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\LogStateTest" file="/home/anthony/projects/activity-log/tests/Unit/LogStateTest.php" tests="3" assertions="0" errors="3" failures="0" skipped="0" time="0">
+      <testcase name="testLogsStatus" class="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\LogStateTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.Unit.LogStateTest" file="/home/anthony/projects/activity-log/tests/Unit/LogStateTest.php" line="25" assertions="0" time="0.000000">
+        <error type="Illuminate\Database\QueryException">NetworkRailBusinessSystems\ActivityLog\Tests\Unit\LogStateTest::testLogsStatus
+Illuminate\Database\QueryException: SQLSTATE[HY000]: General error: 1 no such table: users (Connection: testing, SQL: insert into "users" ("name", "email", "email_verified_at", "password", "remember_token", "updated_at", "created_at") values (Ariane Goyette, kelsi.parker@example.com, 2024-11-27 12:32:36, $2y$10$Nl2lwQWDYYBkZ7zKu8ROfe.EGwNQAZnQiFXEJn5zVwtuPRdeijVZG, IrT9DdHsSj, 2024-11-27 12:32:36, 2024-11-27 12:32:36))
 
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
-/home/calum/projects/activity-log/tests/LogNotificationTest.php:18</error>
-        </testcase>
-        <testcase name="testRecordsCcRecipients" file="/home/calum/projects/activity-log/tests/LogNotificationTest.php" line="53" class="NetworkRailBusinessSystems\ActivityLog\Tests\LogNotificationTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.LogNotificationTest" assertions="0" time="0.000000">
-          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\LogNotificationTest::testRecordsCcRecipients
-Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:779
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:560
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:524
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php:32
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:3799
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:2049
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1358
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1323
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1162
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:349
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:257
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:344
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:298
+/home/anthony/projects/activity-log/tests/Unit/LogStateTest.php:20</error>
+      </testcase>
+      <testcase name="testRecordsNewState" class="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\LogStateTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.Unit.LogStateTest" file="/home/anthony/projects/activity-log/tests/Unit/LogStateTest.php" line="34" assertions="0" time="0.000000">
+        <error type="Illuminate\Database\QueryException">NetworkRailBusinessSystems\ActivityLog\Tests\Unit\LogStateTest::testRecordsNewState
+Illuminate\Database\QueryException: SQLSTATE[HY000]: General error: 1 no such table: users (Connection: testing, SQL: insert into "users" ("name", "email", "email_verified_at", "password", "remember_token", "updated_at", "created_at") values (Mr. Jimmy Rowe I, padberg.caleb@example.org, 2024-11-27 12:32:36, $2y$10$Nl2lwQWDYYBkZ7zKu8ROfe.EGwNQAZnQiFXEJn5zVwtuPRdeijVZG, MNUXmcitPO, 2024-11-27 12:32:36, 2024-11-27 12:32:36))
 
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
-/home/calum/projects/activity-log/tests/LogNotificationTest.php:18</error>
-        </testcase>
-        <testcase name="testDoesntWhenCcEmpty" file="/home/calum/projects/activity-log/tests/LogNotificationTest.php" line="61" class="NetworkRailBusinessSystems\ActivityLog\Tests\LogNotificationTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.LogNotificationTest" assertions="0" time="0.000000">
-          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\LogNotificationTest::testDoesntWhenCcEmpty
-Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:779
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:560
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:524
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php:32
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:3799
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:2049
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1358
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1323
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1162
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:349
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:257
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:344
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:298
+/home/anthony/projects/activity-log/tests/Unit/LogStateTest.php:20</error>
+      </testcase>
+      <testcase name="testRecordsOldState" class="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\LogStateTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.Unit.LogStateTest" file="/home/anthony/projects/activity-log/tests/Unit/LogStateTest.php" line="39" assertions="0" time="0.000000">
+        <error type="Illuminate\Database\QueryException">NetworkRailBusinessSystems\ActivityLog\Tests\Unit\LogStateTest::testRecordsOldState
+Illuminate\Database\QueryException: SQLSTATE[HY000]: General error: 1 no such table: users (Connection: testing, SQL: insert into "users" ("name", "email", "email_verified_at", "password", "remember_token", "updated_at", "created_at") values (Hailie Schulist, wehner.jody@example.org, 2024-11-27 12:32:36, $2y$10$Nl2lwQWDYYBkZ7zKu8ROfe.EGwNQAZnQiFXEJn5zVwtuPRdeijVZG, DneVdGbksd, 2024-11-27 12:32:36, 2024-11-27 12:32:36))
 
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
-/home/calum/projects/activity-log/tests/LogNotificationTest.php:18</error>
-        </testcase>
-      </testsuite>
-      <testsuite name="NetworkRailBusinessSystems\ActivityLog\Tests\LogRoleChangeTest" file="/home/calum/projects/activity-log/tests/LogRoleChangeTest.php" tests="1" assertions="0" errors="1" failures="0" skipped="0" time="0.000000">
-        <testcase name="testLogsStatus" file="/home/calum/projects/activity-log/tests/LogRoleChangeTest.php" line="25" class="NetworkRailBusinessSystems\ActivityLog\Tests\LogRoleChangeTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.LogRoleChangeTest" assertions="0" time="0.000000">
-          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\LogRoleChangeTest::testLogsStatus
-Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:779
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:560
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:524
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php:32
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:3799
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:2049
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1358
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1323
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1162
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:349
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:257
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:344
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:298
+/home/anthony/projects/activity-log/tests/Unit/LogStateTest.php:20</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\UserTest" file="/home/anthony/projects/activity-log/tests/Unit/UserTest.php" tests="6" assertions="0" errors="6" failures="0" skipped="0" time="0">
+      <testcase name="testReturnsView" class="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\UserTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.Unit.UserTest" file="/home/anthony/projects/activity-log/tests/Unit/UserTest.php" line="31" assertions="0" time="0.000000">
+        <error type="Illuminate\Database\QueryException">NetworkRailBusinessSystems\ActivityLog\Tests\Unit\UserTest::testReturnsView
+Illuminate\Database\QueryException: SQLSTATE[HY000]: General error: 1 no such table: users (Connection: testing, SQL: insert into "users" ("name", "email", "email_verified_at", "password", "remember_token", "updated_at", "created_at") values (Gisselle Mraz, ernest91@example.org, 2024-11-27 12:32:36, $2y$10$YQne70pYiBque/eBh3NaV.Q0gLXM2RjDhpFrpe0EahzoBOw05Dfz., mMkN09iRA5, 2024-11-27 12:32:36, 2024-11-27 12:32:36))
 
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
-/home/calum/projects/activity-log/tests/LogRoleChangeTest.php:18</error>
-        </testcase>
-      </testsuite>
-      <testsuite name="NetworkRailBusinessSystems\ActivityLog\Tests\LogStateTest" file="/home/calum/projects/activity-log/tests/LogStateTest.php" tests="3" assertions="0" errors="3" failures="0" skipped="0" time="0.000000">
-        <testcase name="testLogsStatus" file="/home/calum/projects/activity-log/tests/LogStateTest.php" line="25" class="NetworkRailBusinessSystems\ActivityLog\Tests\LogStateTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.LogStateTest" assertions="0" time="0.000000">
-          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\LogStateTest::testLogsStatus
-Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:779
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:560
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:524
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php:32
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:3799
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:2049
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1358
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1323
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1162
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:349
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:257
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:344
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:298
+/home/anthony/projects/activity-log/vendor/anthonyedmonds/laravel-testing-traits/src/SignsInUsers.php:15
+/home/anthony/projects/activity-log/vendor/anthonyedmonds/laravel-testing-traits/src/SignsInUsers.php:35
+/home/anthony/projects/activity-log/tests/Unit/UserTest.php:23</error>
+      </testcase>
+      <testcase name="testWithActivities" class="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\UserTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.Unit.UserTest" file="/home/anthony/projects/activity-log/tests/Unit/UserTest.php" line="36" assertions="0" time="0.000000">
+        <error type="Illuminate\Database\QueryException">NetworkRailBusinessSystems\ActivityLog\Tests\Unit\UserTest::testWithActivities
+Illuminate\Database\QueryException: SQLSTATE[HY000]: General error: 1 no such table: users (Connection: testing, SQL: insert into "users" ("name", "email", "email_verified_at", "password", "remember_token", "updated_at", "created_at") values (Francisca Gutmann, hammes.kurt@example.net, 2024-11-27 12:32:36, $2y$10$YQne70pYiBque/eBh3NaV.Q0gLXM2RjDhpFrpe0EahzoBOw05Dfz., QJJHZfJwD0, 2024-11-27 12:32:36, 2024-11-27 12:32:36))
 
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
-/home/calum/projects/activity-log/tests/LogStateTest.php:18</error>
-        </testcase>
-        <testcase name="testRecordsNewState" file="/home/calum/projects/activity-log/tests/LogStateTest.php" line="34" class="NetworkRailBusinessSystems\ActivityLog\Tests\LogStateTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.LogStateTest" assertions="0" time="0.000000">
-          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\LogStateTest::testRecordsNewState
-Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:779
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:560
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:524
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php:32
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:3799
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:2049
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1358
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1323
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1162
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:349
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:257
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:344
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:298
+/home/anthony/projects/activity-log/vendor/anthonyedmonds/laravel-testing-traits/src/SignsInUsers.php:15
+/home/anthony/projects/activity-log/vendor/anthonyedmonds/laravel-testing-traits/src/SignsInUsers.php:35
+/home/anthony/projects/activity-log/tests/Unit/UserTest.php:23</error>
+      </testcase>
+      <testcase name="testWithBack" class="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\UserTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.Unit.UserTest" file="/home/anthony/projects/activity-log/tests/Unit/UserTest.php" line="44" assertions="0" time="0.000000">
+        <error type="Illuminate\Database\QueryException">NetworkRailBusinessSystems\ActivityLog\Tests\Unit\UserTest::testWithBack
+Illuminate\Database\QueryException: SQLSTATE[HY000]: General error: 1 no such table: users (Connection: testing, SQL: insert into "users" ("name", "email", "email_verified_at", "password", "remember_token", "updated_at", "created_at") values (Cedrick Bruen, bradly17@example.org, 2024-11-27 12:32:36, $2y$10$YQne70pYiBque/eBh3NaV.Q0gLXM2RjDhpFrpe0EahzoBOw05Dfz., nx05yZ5eW0, 2024-11-27 12:32:36, 2024-11-27 12:32:36))
 
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
-/home/calum/projects/activity-log/tests/LogStateTest.php:18</error>
-        </testcase>
-        <testcase name="testRecordsOldState" file="/home/calum/projects/activity-log/tests/LogStateTest.php" line="39" class="NetworkRailBusinessSystems\ActivityLog\Tests\LogStateTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.LogStateTest" assertions="0" time="0.000000">
-          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\LogStateTest::testRecordsOldState
-Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:779
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:560
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:524
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php:32
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:3799
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:2049
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1358
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1323
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1162
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:349
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:257
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:344
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:298
+/home/anthony/projects/activity-log/vendor/anthonyedmonds/laravel-testing-traits/src/SignsInUsers.php:15
+/home/anthony/projects/activity-log/vendor/anthonyedmonds/laravel-testing-traits/src/SignsInUsers.php:35
+/home/anthony/projects/activity-log/tests/Unit/UserTest.php:23</error>
+      </testcase>
+      <testcase name="testWithShowSubject" class="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\UserTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.Unit.UserTest" file="/home/anthony/projects/activity-log/tests/Unit/UserTest.php" line="49" assertions="0" time="0.000000">
+        <error type="Illuminate\Database\QueryException">NetworkRailBusinessSystems\ActivityLog\Tests\Unit\UserTest::testWithShowSubject
+Illuminate\Database\QueryException: SQLSTATE[HY000]: General error: 1 no such table: users (Connection: testing, SQL: insert into "users" ("name", "email", "email_verified_at", "password", "remember_token", "updated_at", "created_at") values (Karley Prohaska V, hkonopelski@example.com, 2024-11-27 12:32:36, $2y$10$YQne70pYiBque/eBh3NaV.Q0gLXM2RjDhpFrpe0EahzoBOw05Dfz., zNMZmpgNdr, 2024-11-27 12:32:36, 2024-11-27 12:32:36))
 
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
-/home/calum/projects/activity-log/tests/LogStateTest.php:18</error>
-        </testcase>
-      </testsuite>
-      <testsuite name="NetworkRailBusinessSystems\ActivityLog\Tests\UserTest" file="/home/calum/projects/activity-log/tests/UserTest.php" tests="6" assertions="0" errors="6" failures="0" skipped="0" time="0.000000">
-        <testcase name="testReturnsView" file="/home/calum/projects/activity-log/tests/UserTest.php" line="31" class="NetworkRailBusinessSystems\ActivityLog\Tests\UserTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.UserTest" assertions="0" time="0.000000">
-          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\UserTest::testReturnsView
-Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:779
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:560
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:524
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php:32
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:3799
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:2049
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1358
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1323
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1162
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:349
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:257
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:344
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:298
+/home/anthony/projects/activity-log/vendor/anthonyedmonds/laravel-testing-traits/src/SignsInUsers.php:15
+/home/anthony/projects/activity-log/vendor/anthonyedmonds/laravel-testing-traits/src/SignsInUsers.php:35
+/home/anthony/projects/activity-log/tests/Unit/UserTest.php:23</error>
+      </testcase>
+      <testcase name="testWithSubject" class="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\UserTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.Unit.UserTest" file="/home/anthony/projects/activity-log/tests/Unit/UserTest.php" line="54" assertions="0" time="0.000000">
+        <error type="Illuminate\Database\QueryException">NetworkRailBusinessSystems\ActivityLog\Tests\Unit\UserTest::testWithSubject
+Illuminate\Database\QueryException: SQLSTATE[HY000]: General error: 1 no such table: users (Connection: testing, SQL: insert into "users" ("name", "email", "email_verified_at", "password", "remember_token", "updated_at", "created_at") values (Lillian Kutch, bbrown@example.com, 2024-11-27 12:32:36, $2y$10$YQne70pYiBque/eBh3NaV.Q0gLXM2RjDhpFrpe0EahzoBOw05Dfz., OzmKRcLShl, 2024-11-27 12:32:36, 2024-11-27 12:32:36))
 
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
-/home/calum/projects/activity-log/tests/UserTest.php:21</error>
-        </testcase>
-        <testcase name="testWithActivities" file="/home/calum/projects/activity-log/tests/UserTest.php" line="36" class="NetworkRailBusinessSystems\ActivityLog\Tests\UserTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.UserTest" assertions="0" time="0.000000">
-          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\UserTest::testWithActivities
-Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:779
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:560
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:524
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php:32
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:3799
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:2049
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1358
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1323
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1162
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:349
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:257
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:344
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:298
+/home/anthony/projects/activity-log/vendor/anthonyedmonds/laravel-testing-traits/src/SignsInUsers.php:15
+/home/anthony/projects/activity-log/vendor/anthonyedmonds/laravel-testing-traits/src/SignsInUsers.php:35
+/home/anthony/projects/activity-log/tests/Unit/UserTest.php:23</error>
+      </testcase>
+      <testcase name="testWithTitle" class="NetworkRailBusinessSystems\ActivityLog\Tests\Unit\UserTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.Unit.UserTest" file="/home/anthony/projects/activity-log/tests/Unit/UserTest.php" line="59" assertions="0" time="0.000000">
+        <error type="Illuminate\Database\QueryException">NetworkRailBusinessSystems\ActivityLog\Tests\Unit\UserTest::testWithTitle
+Illuminate\Database\QueryException: SQLSTATE[HY000]: General error: 1 no such table: users (Connection: testing, SQL: insert into "users" ("name", "email", "email_verified_at", "password", "remember_token", "updated_at", "created_at") values (Elvie Little V, ilene.hickle@example.org, 2024-11-27 12:32:36, $2y$10$YQne70pYiBque/eBh3NaV.Q0gLXM2RjDhpFrpe0EahzoBOw05Dfz., lSpQ9ecB35, 2024-11-27 12:32:36, 2024-11-27 12:32:36))
 
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
-/home/calum/projects/activity-log/tests/UserTest.php:21</error>
-        </testcase>
-        <testcase name="testWithBack" file="/home/calum/projects/activity-log/tests/UserTest.php" line="44" class="NetworkRailBusinessSystems\ActivityLog\Tests\UserTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.UserTest" assertions="0" time="0.000000">
-          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\UserTest::testWithBack
-Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
-
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
-/home/calum/projects/activity-log/tests/UserTest.php:21</error>
-        </testcase>
-        <testcase name="testWithShowSubject" file="/home/calum/projects/activity-log/tests/UserTest.php" line="49" class="NetworkRailBusinessSystems\ActivityLog\Tests\UserTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.UserTest" assertions="0" time="0.000000">
-          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\UserTest::testWithShowSubject
-Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
-
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
-/home/calum/projects/activity-log/tests/UserTest.php:21</error>
-        </testcase>
-        <testcase name="testWithSubject" file="/home/calum/projects/activity-log/tests/UserTest.php" line="54" class="NetworkRailBusinessSystems\ActivityLog\Tests\UserTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.UserTest" assertions="0" time="0.000000">
-          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\UserTest::testWithSubject
-Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
-
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
-/home/calum/projects/activity-log/tests/UserTest.php:21</error>
-        </testcase>
-        <testcase name="testWithTitle" file="/home/calum/projects/activity-log/tests/UserTest.php" line="59" class="NetworkRailBusinessSystems\ActivityLog\Tests\UserTest" classname="NetworkRailBusinessSystems.ActivityLog.Tests.UserTest" assertions="0" time="0.000000">
-          <error type="Error">NetworkRailBusinessSystems\ActivityLog\Tests\UserTest::testWithTitle
-Error: Failed opening required '/home/calum/projects/activity-log/bootstrap/app.php' (include_path='.:/usr/share/php')
-
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:30
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:54
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithTestCaseLifecycle.php:87
-/home/calum/projects/activity-log/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:44
-/home/calum/projects/activity-log/tests/UserTest.php:21</error>
-        </testcase>
-      </testsuite>
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:779
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:560
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Connection.php:524
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php:32
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:3799
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:2049
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1358
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1323
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1162
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:349
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php:257
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:344
+/home/anthony/projects/activity-log/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php:298
+/home/anthony/projects/activity-log/vendor/anthonyedmonds/laravel-testing-traits/src/SignsInUsers.php:15
+/home/anthony/projects/activity-log/vendor/anthonyedmonds/laravel-testing-traits/src/SignsInUsers.php:35
+/home/anthony/projects/activity-log/tests/Unit/UserTest.php:23</error>
+      </testcase>
     </testsuite>
   </testsuite>
 </testsuites>
