@@ -25,4 +25,9 @@ class Activity extends SpatieActivity
             $query->orderBy('created_at', 'desc');
         });
     }
+
+    protected static function newFactory(): ActivityFactory
+    {
+        return new ActivityFactory();
+    }
 }
