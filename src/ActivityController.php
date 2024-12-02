@@ -28,7 +28,7 @@ class ActivityController extends Controller //TODO
             ->with('subject', $user);
     }
 
-    public function user(Model $user): View //TODO Make User?
+    public function user(Model $user): View
     {
         return $this->view($user, 'name', 'admin.users.show');
     }
