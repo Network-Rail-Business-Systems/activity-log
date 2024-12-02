@@ -10,7 +10,7 @@ class ActivityLogServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(
             __DIR__ . '/activity-log.php',
-            'activity-log',
+            'govuk-activity-log',
         );
     }
 
@@ -28,7 +28,7 @@ class ActivityLogServiceProvider extends ServiceProvider
         ], 'activity-log');
 
         $this->publishes([
-            __DIR__ . '/activity.blade.php' => resource_path('views/vendor/activity-log/activity.blade.php'),
+            __DIR__ . '/Views/activity.blade.php' => resource_path('views/vendor/activity-log/activity.blade.php'),
         ], 'activity-log-views');
     }
 
@@ -40,7 +40,7 @@ class ActivityLogServiceProvider extends ServiceProvider
     protected function bootViews(): void
     {
         $this->loadViewsFrom(
-            __DIR__ . '/activity.blade.php',
+            __DIR__ . '/Views/activity.blade.php',
             'activity-log',
         );
     }
