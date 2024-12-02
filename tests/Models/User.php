@@ -8,14 +8,12 @@ use Spatie\Activitylog\LogOptions;
 use Spatie\Activitylog\Traits\CausesActivity;
 use Spatie\Activitylog\Traits\LogsActivity;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Spatie\Permission\Traits\HasPermissions;
 
 class User extends Authenticatable
 {
     use CausesActivity;
     use LogsActivity;
     use HasFactory;
-    use HasPermissions;
 
     public function getActivitylogOptions(): LogOptions
     {
