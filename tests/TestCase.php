@@ -16,6 +16,8 @@ abstract class TestCase extends BaseTestCase
 
         $this->useDatabase();
         $this->withoutVite();
+
+        config()->set('testing-traits.user_model', Models\User::class);
     }
 
     protected function getPackageProviders($app): array
