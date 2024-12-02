@@ -5,13 +5,16 @@ namespace NetworkRailBusinessSystems\ActivityLog;
 use AnthonyEdmonds\GovukLaravel\Helpers\GovukPage;
 use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Routing\Controller;
 
 class ActivityController extends Controller //TODO
 {
+    use AuthorizesRequests;
+
     public function actions(Model $user): View //TODO change typehint to interface - Actioner, Actioned, root macro on service provider
     {
-        $this->authorize('manage', $user);
+        $this->authorize('manage', $user); //TODO use the authorise stuff to abstract the permissions functionality - ex. policies
 
         $actions = ActivityCollection::make(
             $user
