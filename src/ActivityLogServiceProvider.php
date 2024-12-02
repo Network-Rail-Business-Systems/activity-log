@@ -25,11 +25,11 @@ class ActivityLogServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__ . '/activity-log.php' => config_path('activity-log.php'),
-        ], 'activity-log');
+        ], 'govuk-activity-log');
 
         $this->publishes([
             __DIR__ . '/Views/activity.blade.php' => resource_path('views/vendor/activity-log/activity.blade.php'),
-        ], 'activity-log-views');
+        ], 'govuk-activity-log-views');
     }
 
     protected function bootRoutes(): void
@@ -41,7 +41,7 @@ class ActivityLogServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(
             __DIR__ . '/Views/activity.blade.php',
-            'activity-log',
+            'govuk-activity-log',
         );
     }
 }
