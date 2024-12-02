@@ -9,7 +9,7 @@ use Illuminate\Routing\Controller;
 
 class ActivityController extends Controller //TODO
 {
-    public function actions(Model $user): View //TODO change typehint to interface
+    public function actions(Model $user): View //TODO change typehint to interface - Actioner, Actioned, root macro on service provider
     {
         $this->authorize('manage', $user);
 

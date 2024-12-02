@@ -25,4 +25,9 @@ class Activity extends SpatieActivity
             $query->orderBy('created_at', 'desc');
         });
     }
+
+    protected static function newFactory(): ActivityFactory
+    {
+        return new ActivityFactory(); //TODO may need to create an activities table or figure out how to link this to activity_log table
+    }
 }
