@@ -8,7 +8,11 @@ class ActivityLogServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
-        //TODO GOVUK SERVICE PROVIDER
+        $this->mergeConfigFrom(
+            __DIR__ . '/activity-log.php',
+            'activity-log',
+        );
+
     }
 
     public function boot(): void
@@ -20,7 +24,13 @@ class ActivityLogServiceProvider extends ServiceProvider
 
     protected function bootPublishes(): void
     {
-        //
+        $this->publishes([
+            __DIR__ . '/activity-log.php' => config_path('activity-log.php'),
+        ], 'activity-log');
+
+        $this->publishes([
+            __DIR__ . '/activity.blade.php' => resource_path('views/vendor/activity-log/activity.blade.php'),
+        ], 'activity-log-views');
     }
 
     protected function bootRoutes(): void
@@ -30,6 +40,9 @@ class ActivityLogServiceProvider extends ServiceProvider
 
     protected function bootViews(): void
     {
-        //
+        $this->loadViewsFrom(
+            __DIR__ . '/activity.blade.php',
+            'activity-log',
+        );
     }
 }
