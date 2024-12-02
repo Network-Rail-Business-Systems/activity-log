@@ -12,7 +12,6 @@ class ActivityLogServiceProvider extends ServiceProvider
             __DIR__ . '/activity-log.php',
             'activity-log',
         );
-
     }
 
     public function boot(): void
