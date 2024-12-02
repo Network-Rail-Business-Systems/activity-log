@@ -4,11 +4,10 @@ namespace NetworkRailBusinessSystems\ActivityLog;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use Spatie\Activitylog\Models\Activity as SpatieActivity;
 
 /**
- * @property ?Model $causer //TODO use a mixin
+ * @mixin SpatieActivity
  */
 class Activity extends SpatieActivity
 {
