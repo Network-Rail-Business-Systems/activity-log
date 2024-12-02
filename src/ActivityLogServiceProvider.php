@@ -9,7 +9,7 @@ class ActivityLogServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->mergeConfigFrom(
-            __DIR__ . '/activity-log.php',
+            __DIR__ . '/govuk-activity-log.php',
             'govuk-activity-log',
         );
     }
@@ -24,11 +24,11 @@ class ActivityLogServiceProvider extends ServiceProvider
     protected function bootPublishes(): void
     {
         $this->publishes([
-            __DIR__ . '/activity-log.php' => config_path('activity-log.php'),
+            __DIR__ . '/govuk-activity-log.php' => config_path('govuk-activity-log.php'),
         ], 'govuk-activity-log');
 
         $this->publishes([
-            __DIR__ . '/Views/activity.blade.php' => resource_path('views/vendor/activity-log/activity.blade.php'),
+            __DIR__ . '/Views/activity.blade.php' => resource_path('views/vendor/govuk-activity-log/activity.blade.php'),
         ], 'govuk-activity-log-views');
     }
 
