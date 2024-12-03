@@ -23,7 +23,7 @@ abstract class TestCase extends BaseTestCase
         config()->set('activitylog.activity_model', Activity::class);
         config()->set('activitylog.default_auth_driver', null);
         config()->set('activitylog.default_log_name', 'default');
-        config()->set('activitylog.table_name', env('ACTIVITY_LOGGER_TABLE_NAME', 'activity_log'));
+        config()->set('activitylog.table_name', 'activity_log');
     }
 
     protected function getPackageProviders($app): array
