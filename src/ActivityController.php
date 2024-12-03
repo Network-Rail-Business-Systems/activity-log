@@ -39,8 +39,6 @@ class ActivityController extends Controller//TODO
      */
     protected function view(Model $subject, string $labelKey, string $back): View
     {
-        $this->authorize('manage', $subject);
-
         $activities = ActivityCollection::make(
             $subject
                 ->activities()
