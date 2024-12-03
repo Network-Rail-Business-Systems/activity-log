@@ -21,7 +21,6 @@ class ActionsTest extends TestCase
         parent::setUp();
 
         $this->user = $this->signIn();
-
         activity()
             ->by($this->user)
             ->log('Toot');
