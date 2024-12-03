@@ -24,7 +24,7 @@ class LogStateTest extends TestCase
 
     public function testLogsStatus(): void
     {
-        $this->assertDatabaseHas('activities', [
+        $this->assertDatabaseHas('activity_log', [
             'subject_id' => $this->user->id,
             'event' => 'state',
             'description' => 'State changed to In Progress',

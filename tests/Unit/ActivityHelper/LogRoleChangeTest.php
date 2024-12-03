@@ -24,7 +24,7 @@ class LogRoleChangeTest extends TestCase
 
     public function testLogsStatus(): void
     {
-        $this->assertDatabaseHas('activities', [
+        $this->assertDatabaseHas('activity_log', [
             'subject_id' => $this->user->id,
             'event' => 'role',
             'description' => 'Admin Role granted',

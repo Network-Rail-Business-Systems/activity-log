@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration {
     public function up(): void
     {
-        Schema::create('activities', function (Blueprint $table) {
+        Schema::create('activity_log', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
 
@@ -34,6 +34,6 @@ return new class extends Migration {
 
     public function down(): void
     {
-        Schema::dropIfExists('activities');
+        Schema::dropIfExists('activity_log');
     }
 };
