@@ -8,14 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Routing\Controller;
 
-class ActivityController extends Controller //TODO
+class ActivityController extends Controller//TODO
 {
     use AuthorizesRequests;
 
     public function actions(Model $user): View //TODO change typehint to interface - Actioner, Actioned, root macro on service provider
     {
-        $this->authorize('manage', $user); //TODO use the authorise stuff to abstract the permissions functionality - ex. policies
-
         $actions = ActivityCollection::make(
             $user
                 ->actions()
@@ -24,7 +22,7 @@ class ActivityController extends Controller //TODO
         )->showSubject();
 
         return GovukPage::custom("Activities performed by {$user->name}", 'activity', [])
-            ->setBack(route('admin.users.show', $user))
+            ->setBack(route('admin.users.show', $user)) //TODO will be replaced by traits, need to set routes in provider
             ->with('activities', $actions->toArray(request()))
             ->with('pagination', $actions->resource->toArray())
             ->with('showSubject', true)

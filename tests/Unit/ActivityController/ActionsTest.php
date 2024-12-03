@@ -20,7 +20,8 @@ class ActionsTest extends TestCase
     {
         parent::setUp();
 
-        $this->user = $this->signInWithPermission('manage_users');
+        $this->user = $this->signIn();
+
         activity()
             ->by($this->user)
             ->log('Toot');

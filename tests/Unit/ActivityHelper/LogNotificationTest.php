@@ -35,7 +35,7 @@ class LogNotificationTest extends TestCase
 
     public function testLogsStatus(): void
     {
-        $this->assertDatabaseHas('activity_log', [
+        $this->assertDatabaseHas('activities', [
             'subject_id' => $this->user->id,
             'event' => 'notification',
             'description' => 'Order Ready notification sent',
