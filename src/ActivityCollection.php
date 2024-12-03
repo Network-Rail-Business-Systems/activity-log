@@ -2,6 +2,7 @@
 
 namespace NetworkRailBusinessSystems\ActivityLog;
 
+use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 
 class ActivityCollection extends ResourceCollection
@@ -10,9 +11,9 @@ class ActivityCollection extends ResourceCollection
 
     public bool $showSubject = false;
 
-    public function toArray($request)
+    public function toArray(Request $request): array
     {
-        $request->showSubject = $this->showSubject; //TODO
+        $request->query->set(ActivityResource::REQUEST_KEY, $this->showSubject);
 
         return parent::toArray($request);
     }
