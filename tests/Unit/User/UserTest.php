@@ -20,7 +20,7 @@ class UserTest extends TestCase
     {
         parent::setUp();
 
-        $this->signInWithPermission('manage_users');
+        $this->signIn();
 
         $this->user = User::factory()->create();
 
