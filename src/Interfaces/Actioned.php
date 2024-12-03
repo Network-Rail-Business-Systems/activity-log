@@ -2,7 +2,6 @@
 
 namespace NetworkRailBusinessSystems\ActivityLog\Interfaces;
 
-
 use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 
