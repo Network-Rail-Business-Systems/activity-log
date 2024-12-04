@@ -3,7 +3,6 @@
 namespace NetworkRailBusinessSystems\ActivityLog\Tests\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use NetworkRailBusinessSystems\ActivityLog\Interfaces\Actioned;
 use NetworkRailBusinessSystems\ActivityLog\Interfaces\Actioner;
 use NetworkRailBusinessSystems\ActivityLog\Tests\Database\Factories\UserFactory;
@@ -12,8 +11,9 @@ use NetworkRailBusinessSystems\ActivityLog\Traits\HasActivities;
 use Spatie\Activitylog\LogOptions;
 use Spatie\Activitylog\Traits\CausesActivity;
 use Spatie\Activitylog\Traits\LogsActivity;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Model implements Actioner, Actioned
+class User extends Authenticatable implements Actioner, Actioned
 {
     use CausesActivity;
     use LogsActivity;
