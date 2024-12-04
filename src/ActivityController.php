@@ -2,55 +2,48 @@
 
 namespace NetworkRailBusinessSystems\ActivityLog;
 
-use AnthonyEdmonds\GovukLaravel\Helpers\GovukPage;
 use Illuminate\Contracts\View\View;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Routing\Controller;
+use NetworkRailBusinessSystems\ActivityLog\Interfaces\Actioned;
+use NetworkRailBusinessSystems\ActivityLog\Interfaces\Actioner;
 
-class ActivityController extends Controller//TODO
+class ActivityController extends Controller
 {
     use AuthorizesRequests;
 
-    public function actions(Model $user): View //TODO change typehint to interface - Actioner, Actioned, root macro on service provider
+    /**
+     * @param class-string<Actioner> $class
+     */
+    public function actions(int|string $id, string $class): View
     {
-        $actions = ActivityCollection::make(
-            $user
-                ->actions()
-                ->with(['causer', 'subject'])
-                ->paginate(10),
-        )->showSubject();
-
-        return GovukPage::custom("Activities performed by {$user->name}", 'activity', [])
-            ->setBack(route('admin.users.show', $user)) //TODO will be replaced by traits, need to set routes in provider
-            ->with('activities', $actions->toArray(request()))
-            ->with('pagination', $actions->resource->toArray())
-            ->with('showSubject', true)
-            ->with('subject', $user);
-    }
-
-    public function user(Model $user): View
-    {
-        return $this->view($user, 'name', 'admin.users.show');
+        return $this
+            ->loadSubject($id, $class)
+            ->viewActions();
     }
 
     /**
-     * @param  Model  $subject
+     * @param class-string<Actioned> $class
      */
-    protected function view(Model $subject, string $labelKey, string $back): View
+    public function activities(int|string $id, string $class): View
     {
-        $activities = ActivityCollection::make(
-            $subject
-                ->activities()
-                ->with(['causer', 'subject'])
-                ->paginate(10),
-        );
+        return $this
+            ->loadSubject($id, $class)
+            ->viewActivities();
+    }
 
-        return GovukPage::custom("Activity log of {$subject->$labelKey}", 'activity', [])
-            ->setBack(route($back, $subject))
-            ->with('activities', $activities->toArray(request()))
-            ->with('pagination', $activities->resource->toArray())
-            ->with('showSubject', false)
-            ->with('subject', $subject);
+    /**
+     * @param class-string<Actioned>|class-string<Actioner> $class
+     */
+    protected function loadSubject(int|string $id, string $class): Actioned|Actioner
+    {
+        $subject = $class::find($id);
+
+        $permission = $subject->permission();
+        if ($permission !== false) {
+            $this->authorize($permission, $subject);
+        }
+
+        return $subject;
     }
 }
