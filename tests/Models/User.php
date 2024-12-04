@@ -36,7 +36,7 @@ class User extends Model implements Actioner, Actioned
 
     public function backRoute(): string
     {
-        return route ('users.index', $this);
+        return route('users.index', $this);
     }
 
     public function label(): string

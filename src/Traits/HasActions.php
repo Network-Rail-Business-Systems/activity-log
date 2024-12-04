@@ -19,7 +19,7 @@ trait HasActions
                 ->actions()
                 ->with(['causer', 'subject'])
                 ->paginate(10),
-        ) ->showSubject();
+        )->showSubject();
 
         return GovukPage::custom("Activities performed by {$this->label()}", 'activity', [])
             ->setBack($this->backRoute())
