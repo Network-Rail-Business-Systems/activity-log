@@ -24,6 +24,8 @@ class UserTest extends TestCase
 
         $this->user = User::factory()->create();
 
+        dd($this->user->manage()); //TODO LOOK INTO HOW THE POLICY STUFF IS CALLED
+
         $this->controller = new ActivityController();
         $this->response = $this->controller->user($this->user);
     }
