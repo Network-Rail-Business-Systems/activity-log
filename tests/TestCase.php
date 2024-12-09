@@ -3,9 +3,11 @@
 namespace NetworkRailBusinessSystems\ActivityLog\Tests;
 
 use AnthonyEdmonds\LaravelTestingTraits\SignsInUsers;
+use Illuminate\Support\Facades\Gate;
 use NetworkRailBusinessSystems\ActivityLog\Activity;
 use NetworkRailBusinessSystems\ActivityLog\ActivityLogServiceProvider;
 use NetworkRailBusinessSystems\ActivityLog\Tests\Models\User;
+use NetworkRailBusinessSystems\ActivityLog\Tests\Policies\UserPolicy;
 use Orchestra\Testbench\TestCase as BaseTestCase;
 
 abstract class TestCase extends BaseTestCase
@@ -18,6 +20,7 @@ abstract class TestCase extends BaseTestCase
 
         $this->useDatabase();
         $this->withoutVite();
+        $this->registerPolicies();
 
         config()->set('testing-traits.user_model', User::class);
         config()->set('activitylog.activity_model', Activity::class);
@@ -37,5 +40,10 @@ abstract class TestCase extends BaseTestCase
     {
         $this->app->useDatabasePath(__DIR__ . '/Database');
         $this->runLaravelMigrations();
+    }
+
+    protected function registerPolicies(): void
+    {
+        Gate::policy(User::class, UserPolicy::class);
     }
 }
