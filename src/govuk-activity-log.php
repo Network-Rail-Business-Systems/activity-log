@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'user_model' => \NetworkRailBusinessSystems\ActivityLog\Activity::class,
+    'user_model' => App\Models\User::class,
 ];
