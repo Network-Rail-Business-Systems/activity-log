@@ -12,6 +12,8 @@ use Illuminate\Support\Str;
  */
 class ActivityResource extends JsonResource
 {
+    public const string REQUEST_KEY = 'show_activity_log_subject';
+
     public function toArray($request): array
     {
         return [
@@ -26,7 +28,7 @@ class ActivityResource extends JsonResource
     {
         $label = ucfirst($this->description);
 
-        if ($request->showSubject === true) { //TODO
+        if ($request->get(self::REQUEST_KEY, false) === true) {
             switch ($this->event) {
                 case 'notification':
                     break;
