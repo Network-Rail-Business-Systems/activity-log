@@ -15,7 +15,7 @@ class ActivityController extends Controller
     /**
      * @param class-string<Actioner> $class
      */
-    public function actions(int|string $id, string $class): View
+    public function getActions(int|string $id, string $class): View
     {
         return $this
             ->loadSubject($id, $class)

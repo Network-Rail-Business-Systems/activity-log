@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 interface Actioner extends ActivityLog
 {
-    public function actions(): MorphMany;
+    public function getActions(): MorphMany;
 
     public function viewActions(): View;
 }

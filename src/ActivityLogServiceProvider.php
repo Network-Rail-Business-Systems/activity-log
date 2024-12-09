@@ -42,7 +42,7 @@ class ActivityLogServiceProvider extends ServiceProvider
             Route::get('/{id}/actions', [
                 'as' => 'actions',
                 'class' => $model,
-                'uses' => ActivityController::class . '@actions',
+                'uses' => ActivityController::class . '@getActions',
             ]);
         });
 
