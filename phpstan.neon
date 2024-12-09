@@ -5,6 +5,7 @@ parameters:
     level: 5
     paths:
         - src
+
     excludePaths:
         - src/govuk-activity-log.php
         - src/Views/activity-blade.php
