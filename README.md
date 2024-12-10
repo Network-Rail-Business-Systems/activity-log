@@ -17,7 +17,8 @@ Via Composer: `composer require networkrailbusinesssystems/activity-log`
 
 ## Publish files
 
-# Set-up
+## Set-up
+
 ## Pre-requisites
 The Activity Log requires the [GOVUK Laravel Forms Route Macro](https://github.com/AnthonyEdmonds/govuk-laravel/blob/main/docs/forms.md).
 
