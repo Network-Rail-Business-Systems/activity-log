@@ -18,7 +18,9 @@ abstract class TestCase extends BaseTestCase
 
         $this->useDatabase();
         $this->withoutVite();
+        $this->setUpRoutes();
 
+//        $modelClass = Config::set('user_model', User::class);
         config()->set('testing-traits.user_model', User::class);
         config()->set('activitylog.activity_model', Activity::class);
         config()->set('activitylog.default_auth_driver', null);
@@ -37,5 +39,14 @@ abstract class TestCase extends BaseTestCase
     {
         $this->app->useDatabasePath(__DIR__ . '/Database');
         $this->runLaravelMigrations();
+    }
+
+    protected function setUpRoutes(): void
+    {
+        $router = app('router');
+
+        $router
+            ->name('admin.users.show')
+            ->get('/admin/users/{user}');
     }
 }

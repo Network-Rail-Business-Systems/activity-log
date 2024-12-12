@@ -37,6 +37,14 @@ class ActivityLogServiceProvider extends ServiceProvider
 
     protected function bootRoutes(): void
     {
+//        Anything you need for testing you dont add here
+//        Anything you use for the application go here/use WILL BE USED EVERYWHERE
+//        Testing the package, YOU DO NOT ADD TO SERVICE PROVIDER
+//        Create routes in testcase but you do not need to put macros in the service provider
+//        User.php is only for testing this package and not the overall package as it would be different for everyone
+//
+
+
         /** @param class-string<Actioner> $model */
         Route::macro('activityLogActioner', function (string $model) {
             Route::get('/{id}/actions', [
@@ -51,10 +59,11 @@ class ActivityLogServiceProvider extends ServiceProvider
             Route::get('/{id}/activities', [
                 'as' => 'activities',
                 'class' => $model,
-                'uses' => ActivityController::class . '@activities',
+                'uses' => ActivityController::class . '@activity',
             ]);
         });
     }
+
 
     protected function bootViews(): void
     {

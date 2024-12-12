@@ -25,7 +25,7 @@ class UserTest extends TestCase
         $this->user = User::factory()->create();
 
         $this->controller = new ActivityController();
-        $this->response = $this->controller->user($this->user);
+        $this->response = $this->user->viewActions();
     }
 
     public function testReturnsView(): void
@@ -48,7 +48,9 @@ class UserTest extends TestCase
 
     public function testWithShowSubject(): void
     {
-        $this->assertFalse($this->response->getData()['showSubject']);
+//        dd($this->response->getData()['showSubject']);
+//        dd($this->assertTrue($this->response->getData()['showSubject']));
+        $this->assertTrue($this->response->getData()['showSubject']);
     }
 
     public function testWithSubject(): void
@@ -59,7 +61,7 @@ class UserTest extends TestCase
     public function testWithTitle(): void
     {
         $this->assertEquals(
-            "Activity log of {$this->user->name}",
+            "Activities performed by {$this->user->name}",
             $this->response->getData()['title'],
         );
     }
