@@ -20,7 +20,6 @@ abstract class TestCase extends BaseTestCase
         $this->withoutVite();
         $this->setUpRoutes();
 
-//        $modelClass = Config::set('user_model', User::class);
         config()->set('testing-traits.user_model', User::class);
         config()->set('activitylog.activity_model', Activity::class);
         config()->set('activitylog.default_auth_driver', null);

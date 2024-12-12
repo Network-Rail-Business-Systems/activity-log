@@ -48,8 +48,8 @@ class UserTest extends TestCase
 
     public function testWithShowSubject(): void
     {
-//        dd($this->response->getData()['showSubject']);
-//        dd($this->assertTrue($this->response->getData()['showSubject']));
+        //        dd($this->response->getData()['showSubject']);
+        //        dd($this->assertTrue($this->response->getData()['showSubject']));
         $this->assertTrue($this->response->getData()['showSubject']);
     }
 

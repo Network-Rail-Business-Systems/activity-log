@@ -27,14 +27,14 @@ class ActionsTest extends TestCase
         $model = '\NetworkRailBusinessSystems\ActivityLog\Tests\Models\User';
         config()->set('govuk-activity-log.user_model', $model);
 
-//             __DIR__.'../../Models';
+        //             __DIR__.'../../Models';
 
         $this->controller = new ActivityController();
-//        dd($this->controller->actions($this->user->id,$this->user));
-//        dd('Does it get here' . $this->controller->actions($this->user->id, $this->user)); NO IT DOES NOT
+        //        dd($this->controller->actions($this->user->id,$this->user));
+        //        dd('Does it get here' . $this->controller->actions($this->user->id, $this->user)); NO IT DOES NOT
         $this->response = $this->controller->actions($this->user->id, $model);
-//        dd('This is reponse: '.$this->response); Doesnt reach here
-//        dd(100000);
+        //        dd('This is reponse: '.$this->response); Doesnt reach here
+        //        dd(100000);
     }
 
     public function testReturnsView(): void
