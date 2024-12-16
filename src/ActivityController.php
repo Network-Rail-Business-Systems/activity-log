@@ -40,6 +40,7 @@ class ActivityController extends Controller
         $subject = $class::find($id);
 
         $permission = $subject->permission();
+
         if ($permission !== false) {
             $this->authorize($permission, $subject);
         }

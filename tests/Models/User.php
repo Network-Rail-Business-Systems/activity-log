@@ -36,7 +36,7 @@ class User extends Authenticatable implements Actioner, Actioned
 
     public function backRoute(): string
     {
-        return route('users.index', $this);
+        return route('admin.users.show', $this);
     }
 
     public function label(): string
@@ -46,6 +46,6 @@ class User extends Authenticatable implements Actioner, Actioned
 
     public function permission(): string|false
     {
-        return 'manage';
+        return false;
     }
 }

@@ -26,7 +26,7 @@ class ActionsTest extends TestCase
             ->log('Toot');
 
         $this->controller = new ActivityController();
-        $this->response = $this->controller->actions($this->user);
+        $this->response = $this->controller->actions($this->user->id, User::class);
     }
 
     public function testReturnsView(): void

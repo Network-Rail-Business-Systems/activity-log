@@ -21,6 +21,7 @@ abstract class TestCase extends BaseTestCase
         $this->useDatabase();
         $this->withoutVite();
         $this->registerPolicies();
+        $this->setUpRoutes();
 
         config()->set('testing-traits.user_model', User::class);
         config()->set('activitylog.activity_model', Activity::class);
@@ -45,5 +46,14 @@ abstract class TestCase extends BaseTestCase
     protected function registerPolicies(): void
     {
         Gate::policy(User::class, UserPolicy::class);
+    }
+
+    protected function setUpRoutes(): void
+    {
+        $router = app('router');
+
+        $router
+            ->name('admin.users.show')
+            ->get('/admin/users/{user}');
     }
 }
