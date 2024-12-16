@@ -51,11 +51,10 @@ class ActivityLogServiceProvider extends ServiceProvider
             Route::get('/{id}/activities', [
                 'as' => 'activities',
                 'class' => $model,
-                'uses' => ActivityController::class . '@activity',
+                'uses' => ActivityController::class . '@activities',
             ]);
         });
     }
-
 
     protected function bootViews(): void
     {

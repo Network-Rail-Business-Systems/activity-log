@@ -25,12 +25,8 @@ class ActionsTest extends TestCase
             ->by($this->user)
             ->log('Toot');
 
-        $model = '\NetworkRailBusinessSystems\ActivityLog\Tests\Models\User';
-        config()->set('govuk-activity-log.user_model', $model);
-
-
         $this->controller = new ActivityController();
-        $this->response = $this->controller->actions($this->user->id, $model);
+        $this->response = $this->controller->actions($this->user->id, User::class);
     }
 
     public function testReturnsView(): void
