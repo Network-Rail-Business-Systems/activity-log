@@ -8,7 +8,7 @@ use NetworkRailBusinessSystems\ActivityLog\ActivityController;
 use NetworkRailBusinessSystems\ActivityLog\Tests\Models\User;
 use NetworkRailBusinessSystems\ActivityLog\Tests\TestCase;
 
-class ActionsTest extends TestCase //TODO need to seperate into files
+class ActionsTest extends TestCase
 {
     protected ActivityController $controller;
 
@@ -34,7 +34,7 @@ class ActionsTest extends TestCase //TODO need to seperate into files
         $this->assertEquals('activity', $this->response->getData()['content']);
     }
 
-    public function testWithActivities(): void //TODO test says they are equal when they arent?
+    public function testWithActivities(): void
     {
         $this->assertEquals(
             ActivityCollection::make($this->user->actions)

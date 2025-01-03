@@ -2,6 +2,7 @@
 
 namespace NetworkRailBusinessSystems\ActivityLog\Tests;
 
+use AnthonyEdmonds\LaravelTestingTraits\AssertsPolicies;
 use AnthonyEdmonds\LaravelTestingTraits\SignsInUsers;
 use Illuminate\Support\Facades\Gate;
 use NetworkRailBusinessSystems\ActivityLog\Activity;
@@ -13,6 +14,7 @@ use Orchestra\Testbench\TestCase as BaseTestCase;
 abstract class TestCase extends BaseTestCase
 {
     use SignsInUsers;
+    use AssertsPolicies;
 
     protected function setUp(): void
     {

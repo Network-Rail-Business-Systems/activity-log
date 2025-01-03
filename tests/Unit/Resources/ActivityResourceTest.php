@@ -30,7 +30,7 @@ class ActivityResourceTest extends TestCase
             ->log('my description');
 
         $this->assertEquals(
-            "User My description {$this->user->name}", //TODO idk what this is
+            "User My description {$this->user->name}",
             $this->makeResource($activity)['label'],
         );
     }

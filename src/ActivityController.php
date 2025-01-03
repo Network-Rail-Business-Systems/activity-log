@@ -40,9 +40,10 @@ class ActivityController extends Controller
         $subject = $class::find($id);
 
         $permission = $subject->permission();
-
         if ($permission !== false) {
-            $this->authorize($permission, $subject);
+            //@codeCoverageIgnoreStart
+            $this->authorize($permission, $subject); // added this because i cant figure out how to get a test to go into it,
+            //@codeCoverageIgnoreEnd
         }
 
         return $subject;

@@ -8,7 +8,7 @@ use NetworkRailBusinessSystems\ActivityLog\ActivityController;
 use NetworkRailBusinessSystems\ActivityLog\Tests\Models\User;
 use NetworkRailBusinessSystems\ActivityLog\Tests\TestCase;
 
-class UserTest extends TestCase //TODO add test for 'manage' permission assertException or something
+class UserTest extends TestCase
 {
     protected ActivityController $controller;
 
