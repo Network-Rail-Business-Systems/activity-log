@@ -2,25 +2,30 @@
 
 namespace NetworkRailBusinessSystems\ActivityLog\Tests\Unit\Provider;
 
+use Illuminate\Support\Facades\Route;
 use NetworkRailBusinessSystems\ActivityLog\Tests\Models\User;
 use NetworkRailBusinessSystems\ActivityLog\Tests\TestCase;
 
 class ProviderTest extends TestCase
 {
-    protected User $user;
-
     protected function setUp(): void
     {
         parent::setUp();
+    }
 
-        $this->user = User::factory()->create();
-        $this->signIn($this->user);
+    public function testActioner(): void
+    {
+        Route::activityLogActioner(User::class);
+        $routes = Route::getRoutes();
+
+        $this->assertNotNull($routes->getByName('actions'));
     }
 
     public function testActioned(): void
     {
-        $response = $this->get(route('activities', ['id' => $this->user->id]));
+        Route::activityLogActioned(User::class);
+        $routes = Route::getRoutes();
 
-        $response->assertStatus(200);
+        $this->assertNotNull($routes->getByName('activities'));
     }
 }

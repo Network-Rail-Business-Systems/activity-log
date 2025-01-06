@@ -2,7 +2,6 @@
 
 namespace NetworkRailBusinessSystems\ActivityLog\Tests\Policies;
 
-use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Support\Facades\Gate;
 use NetworkRailBusinessSystems\ActivityLog\ActivityController;
 use NetworkRailBusinessSystems\ActivityLog\Tests\Models\User;
@@ -23,7 +22,7 @@ class UserPolicyTest extends TestCase
         $this->policy = new UserPolicy();
 
         $this->user = User::factory()->create();
-        $this->user = $this->signIn($this->user);
+        $this->signIn($this->user);
 
         $this->controller = new ActivityController();
     }
@@ -34,12 +33,6 @@ class UserPolicyTest extends TestCase
             $this->policy->manage($this->user),
             'User cannot manage',
         );
-    }
-
-    public function testExceptionWithUnauthorised(): void
-    {
-        $this->expectException(AuthorizationException::class);
-        $this->controller->authorize('manage', $this->user);
     }
 
     public function testAllowsWithPermission(): void

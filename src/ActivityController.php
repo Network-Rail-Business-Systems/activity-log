@@ -38,12 +38,11 @@ class ActivityController extends Controller
     protected function loadSubject(int|string $id, string $class): Actioned|Actioner
     {
         $subject = $class::find($id);
+        //        dd($id, $class,$subject);
 
         $permission = $subject->permission();
         if ($permission !== false) {
-            //@codeCoverageIgnoreStart
-            $this->authorize($permission, $subject); // added this because i cant figure out how to get a test to go into it,
-            //@codeCoverageIgnoreEnd
+            $this->authorize($permission, $subject);
         }
 
         return $subject;

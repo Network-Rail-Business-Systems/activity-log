@@ -2,9 +2,11 @@
 
 namespace NetworkRailBusinessSystems\ActivityLog\Tests\Unit\ActivityController;
 
+use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Contracts\View\View;
 use NetworkRailBusinessSystems\ActivityLog\ActivityCollection;
 use NetworkRailBusinessSystems\ActivityLog\ActivityController;
+use NetworkRailBusinessSystems\ActivityLog\Tests\Models\AuthorisedUser;
 use NetworkRailBusinessSystems\ActivityLog\Tests\Models\User;
 use NetworkRailBusinessSystems\ActivityLog\Tests\TestCase;
 
@@ -65,5 +67,13 @@ class ActionsTest extends TestCase
             "Activities performed by {$this->user->name}",
             $this->response->getData()['title'],
         );
+    }
+
+    public function testExceptionWithUnauthorised(): void
+    {
+        $newUser = AuthorisedUser::factory()->create();
+
+        $this->expectException(AuthorizationException::class);
+        $this->controller->actions($newUser->id, AuthorisedUser::class);
     }
 }
