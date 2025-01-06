@@ -3,7 +3,6 @@
 namespace NetworkRailBusinessSystems\ActivityLog\Tests\Policies;
 
 use Illuminate\Support\Facades\Gate;
-use NetworkRailBusinessSystems\ActivityLog\ActivityController;
 use NetworkRailBusinessSystems\ActivityLog\Tests\Models\User;
 use NetworkRailBusinessSystems\ActivityLog\Tests\TestCase;
 
@@ -13,8 +12,6 @@ class UserPolicyTest extends TestCase
 
     protected User $user;
 
-    protected ActivityController $controller;
-
     protected function setUp(): void
     {
         parent::setUp();
@@ -23,8 +20,6 @@ class UserPolicyTest extends TestCase
 
         $this->user = User::factory()->create();
         $this->signIn($this->user);
-
-        $this->controller = new ActivityController();
     }
 
     public function testDenies(): void
