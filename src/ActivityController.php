@@ -38,9 +38,9 @@ class ActivityController extends Controller
     protected function loadSubject(int|string $id, string $class): Actioned|Actioner
     {
         $subject = $class::find($id);
-        //        dd($id, $class,$subject);
 
         $permission = $subject->permission();
+
         if ($permission !== false) {
             $this->authorize($permission, $subject);
         }

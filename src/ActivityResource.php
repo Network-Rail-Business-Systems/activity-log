@@ -113,7 +113,7 @@ class ActivityResource extends JsonResource
 
         if (
             strpos($value, 'T') === 10
-            && strpos($value, 'Z') === 19 //TODO was 26 but idk how to make the right format with 26 characters
+            && strpos($value, 'Z') === 19
         ) {
             return Carbon::parse($value)->format('d/m/Y H:i');
         }

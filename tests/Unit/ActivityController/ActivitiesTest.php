@@ -34,7 +34,7 @@ class ActivitiesTest extends TestCase
         $this->assertEquals('activity', $this->response->getData()['content']);
     }
 
-    public function testWithActivities(): void //TODO test says they are equal when they arent?
+    public function testWithActivities(): void
     {
         $this->assertEquals(
             ActivityCollection::make($this->user->activities)
