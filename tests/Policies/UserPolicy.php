@@ -13,7 +13,7 @@ class UserPolicy
     public function manage(User $user): Response
     {
         return $user->can('manage') === true
-            ? $this->allow('You can manage')
-            : $this->deny('You cannot manage');
+            ? $this->allow('User can manage')
+            : $this->deny('User cannot manage');
     }
 }

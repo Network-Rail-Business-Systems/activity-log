@@ -1,6 +1,6 @@
 <?php
 
-namespace NetworkRailBusinessSystems\ActivityLog\Tests\Unit\User;
+namespace NetworkRailBusinessSystems\ActivityLog\Tests\Unit\ActivityController;
 
 use Illuminate\Contracts\View\View;
 use NetworkRailBusinessSystems\ActivityLog\ActivityCollection;
@@ -8,7 +8,7 @@ use NetworkRailBusinessSystems\ActivityLog\ActivityController;
 use NetworkRailBusinessSystems\ActivityLog\Tests\Models\User;
 use NetworkRailBusinessSystems\ActivityLog\Tests\TestCase;
 
-class UserTest extends TestCase
+class ActivitiesTest extends TestCase
 {
     protected ActivityController $controller;
 
@@ -20,12 +20,13 @@ class UserTest extends TestCase
     {
         parent::setUp();
 
-        $this->signIn();
-
-        $this->user = User::factory()->create();
+        $this->user = $this->signIn();
+        activity()
+            ->by($this->user)
+            ->log('Toot');
 
         $this->controller = new ActivityController();
-        $this->response = $this->user->viewActions();
+        $this->response = $this->controller->activities($this->user->id, User::class);
     }
 
     public function testReturnsView(): void
@@ -36,7 +37,8 @@ class UserTest extends TestCase
     public function testWithActivities(): void
     {
         $this->assertEquals(
-            ActivityCollection::make($this->user->activities)->toArray(request()),
+            ActivityCollection::make($this->user->activities)
+                ->toArray(request()),
             $this->response->getData()['activities'],
         );
     }
@@ -44,11 +46,6 @@ class UserTest extends TestCase
     public function testWithBack(): void
     {
         $this->assertEquals(route('admin.users.show', $this->user), $this->response->getData()['back']);
-    }
-
-    public function testWithShowSubject(): void
-    {
-        $this->assertTrue($this->response->getData()['showSubject']);
     }
 
     public function testWithSubject(): void
@@ -59,7 +56,7 @@ class UserTest extends TestCase
     public function testWithTitle(): void
     {
         $this->assertEquals(
-            "Activities performed by {$this->user->name}",
+            "Activity log of {$this->user->name}",
             $this->response->getData()['title'],
         );
     }

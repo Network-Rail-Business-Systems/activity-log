@@ -28,7 +28,7 @@ class ActivityResource extends JsonResource
     {
         $label = ucfirst($this->description);
 
-        if ($request->get(self::REQUEST_KEY, false) === true) {
+        if ($request->showSubject === true) {
             switch ($this->event) {
                 case 'notification':
                     break;
@@ -112,8 +112,8 @@ class ActivityResource extends JsonResource
         }
 
         if (
-            strpos($value, 'T') === 10
-            && strpos($value, 'Z') === 26
+            str_contains($value, 'T') === true
+            && str_contains($value, 'Z') === true
         ) {
             return Carbon::parse($value)->format('d/m/Y H:i');
         }
