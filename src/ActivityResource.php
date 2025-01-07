@@ -10,11 +10,6 @@ use Illuminate\Support\Str;
 /**
  * @mixin Activity
  */
-//
-//
-// without GOV UK, past a var to controller
-// creating JSON data, goes to blade and displays there
-//to array is creating JSON data and is passed
 class ActivityResource extends JsonResource
 {
     public const string REQUEST_KEY = 'show_activity_log_subject';
@@ -117,8 +112,8 @@ class ActivityResource extends JsonResource
         }
 
         if (
-            str_contains($value, 'T') !== false
-            && str_contains($value, 'Z') !== false
+            str_contains($value, 'T') === true
+            && str_contains($value, 'Z') === true
         ) {
             return Carbon::parse($value)->format('d/m/Y H:i');
         }
