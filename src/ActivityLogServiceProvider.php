@@ -59,7 +59,7 @@ class ActivityLogServiceProvider extends ServiceProvider
     protected function bootViews(): void
     {
         $this->loadViewsFrom(
-            __DIR__ . '/Views/activity.blade.php',
+            __DIR__ . '/Views',
             'govuk-activity-log',
         );
     }

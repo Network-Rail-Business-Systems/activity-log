@@ -21,7 +21,7 @@ trait HasActivities
                 ->paginate(10),
         );
 
-        return GovukPage::custom("Activity log of {$this->label()}", 'activity', [])
+        return GovukPage::custom("Activity log of {$this->label()}", 'govuk-activity-log::activity', [])
             ->setBack($this->backRoute())
             ->with('activities', $activities->toArray(request()))
             ->with('pagination', $activities->resource->toArray())
