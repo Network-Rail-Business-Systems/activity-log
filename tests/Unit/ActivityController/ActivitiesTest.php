@@ -31,7 +31,7 @@ class ActivitiesTest extends TestCase
 
     public function testReturnsView(): void
     {
-        $this->assertEquals('activity', $this->response->getData()['content']);
+        $this->assertEquals('govuk-activity-log::activity', $this->response->getData()['content']);
     }
 
     public function testWithActivities(): void
