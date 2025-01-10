@@ -49,7 +49,7 @@ class ActivityLogServiceProvider extends ServiceProvider
         /** @param class-string<Actioned> $model */
         Route::macro('activityLogActioned', function (string $model) {
             Route::get('/{id}/activities', [
-                'as' => 'activities',
+                'as' => 'activity',
                 'class' => $model,
                 'uses' => ActivityController::class . '@activities',
             ]);
