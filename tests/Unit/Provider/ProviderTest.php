@@ -26,6 +26,6 @@ class ProviderTest extends TestCase
         Route::activityLogActioned(User::class);
         $routes = Route::getRoutes();
 
-        $this->assertNotNull($routes->getByName('activity'));
+        $this->assertNotNull($routes->getByName('activities'));
     }
 }
