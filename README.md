@@ -15,8 +15,7 @@ Use the Activity Log library to add common activity log components for GOV.UK sy
 ## Installation
 Via Composer: `composer require networkrailbusinesssystems/activity-log`
 
-## Publish files
-### ----Optional----
+## Publish files (Optional)
 All required files can be published with the command:
 `php artisan vendor:publish --provider="NetworkRailBusinessSystems\ActivityLog\ActivityLogServiceProvider" --tag="activity-log"`
 
