@@ -32,7 +32,8 @@ This tag will publish the blade view:
 In your web.php (or your standard route file) add the lines:  
 `Route::activityLogActioner(YourActionerClass)`, `Route::activityLogActioned(YourActionedClass)` in the route path.   
 
-When calling this route in your blade.php, make sure to pass the id. e.g. `route('your.route', $your_user->id)`  
+When calling this route in your blade.php, make sure to pass the id. e.g.   
+`route('your.route', $your_user->id)`  
 
 On the Model `YourActionerClass` and `YourActionedClass`, implement Actioned, Actioner + use the HasActions and HasActivities traits
 
