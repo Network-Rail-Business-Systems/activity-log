@@ -16,7 +16,7 @@ Use the Activity Log library to add common activity log components for GOV.UK sy
 Via Composer: `composer require networkrailbusinesssystems/activity-log`
 
 ## Publish files
-### Optional
+### ----Optional----
 All required files can be published with the command:
 `php artisan vendor:publish --provider="NetworkRailBusinessSystems\ActivityLog\ActivityLogServiceProvider" --tag="activity-log"`
 
@@ -29,6 +29,12 @@ This tag will publish the blade view:
 * /Views/activity.blade.php
 
 ## Set-up
+In your web.php (or your standard route file) add the lines:  
+`Route::activityLogActioner(YourActionerClass)`, `Route::activityLogActioned(YourActionedClass)` in the route path.   
+
+When calling this route in your blade.php, make sure to pass the id. e.g. `route('your.route', $your_user->id)`  
+
+On the Model `YourActionerClass` and `YourActionedClass`, implement Actioned, Actioner + use the HasActions and HasActivities traits
 
 ## Pre-requisites
 The Activity Log requires the [GOVUK Laravel Forms Route Macro](https://github.com/AnthonyEdmonds/govuk-laravel/blob/main/docs/forms.md).
