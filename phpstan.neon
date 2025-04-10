@@ -9,3 +9,4 @@ parameters:
     excludePaths:
         - src/govuk-activity-log.php
         - src/Views/activity.blade.php
+        - src/Traits
