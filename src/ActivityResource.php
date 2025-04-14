@@ -92,7 +92,7 @@ class ActivityResource extends JsonResource
 
     protected function summary(): string
     {
-        $causer = $this->causer?->name ?? 'System';
+        $causer = $this->causer->name ?? 'System';
 
         return $this->created_at->format('d/m/Y H:i') . " by {$causer}";
     }
