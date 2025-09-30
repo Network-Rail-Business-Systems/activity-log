@@ -78,8 +78,8 @@ class ActivityHelper
             }
         } elseif ($recipients instanceof Collection) {
             foreach ($recipients as $recipient) {
-                $list[] =
-                    is_string($recipient) === true
+                $list[]
+                    = is_string($recipient) === true
                         ? $recipient
                         : self::formatListItem($recipient->name, $recipient->email);
             }
