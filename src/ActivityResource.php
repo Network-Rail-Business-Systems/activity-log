@@ -82,8 +82,8 @@ class ActivityResource extends JsonResource
             $detail = ucfirst(explode('.', $key, 2)[0]) . ' set to ' . $this->formatValue($value);
 
             if (isset($this->properties['old'][$key]) === true) {
-                $detail .=
-                    ' (changed from ' . $this->formatValue($this->properties['old'][$key]) . ')';
+                $detail
+                    .= ' (changed from ' . $this->formatValue($this->properties['old'][$key]) . ')';
             }
 
             $details[] = $detail;
