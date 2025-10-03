@@ -34,7 +34,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": "^8.3",
-        "anthonyedmonds/govuk-laravel": "dev-feature/form-builder-v2",
+        "anthonyedmonds/govuk-laravel": "^6",
         "illuminate/support": "^12",
         "spatie/laravel-activitylog": "^4"
     },
