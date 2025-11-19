@@ -37,7 +37,12 @@ class ActivityController extends Controller
      */
     protected function loadSubject(int|string $id, string $class): Actioned|Actioner
     {
-        $subject = $class::find($id);
+        $subject = in_array(
+            'Illuminate\Database\Eloquent\SoftDeletes',
+            class_uses($class)
+        ) === true
+            ? $class::query()->withTrashed()->find($id)
+            : $class::find($id);
 
         $permission = $subject->permission();
 
