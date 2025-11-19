@@ -7,6 +7,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Routing\Controller;
 use NetworkRailBusinessSystems\ActivityLog\Interfaces\Actioned;
 use NetworkRailBusinessSystems\ActivityLog\Interfaces\Actioner;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class ActivityController extends Controller
 {
@@ -37,7 +38,12 @@ class ActivityController extends Controller
      */
     protected function loadSubject(int|string $id, string $class): Actioned|Actioner
     {
-        $subject = $class::find($id);
+        $subject = in_array(
+            SoftDeletes::class,
+            class_uses($class),
+        ) === true
+            ? $class::query()->withTrashed()->find($id)
+            : $class::query()->find($id);
 
         $permission = $subject->permission();
 
