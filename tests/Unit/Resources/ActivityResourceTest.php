@@ -169,7 +169,7 @@ class ActivityResourceTest extends TestCase
         $this->assertEquals(
             [
                 'Arrayed set to "1, 2, 3"',
-                'Reason set to "There is a snake in my boot!"'
+                'Reason set to "There is a snake in my boot!"',
             ],
             $this->makeResource($activity)['details'],
         );
