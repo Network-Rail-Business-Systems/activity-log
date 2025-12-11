@@ -6,6 +6,7 @@ use NetworkRailBusinessSystems\ActivityLog\Activity;
 use NetworkRailBusinessSystems\ActivityLog\ActivityResource;
 use NetworkRailBusinessSystems\ActivityLog\Tests\Models\User;
 use NetworkRailBusinessSystems\ActivityLog\Tests\TestCase;
+use stdClass;
 
 class ActivityResourceTest extends TestCase
 {
@@ -137,7 +138,7 @@ class ActivityResourceTest extends TestCase
         );
     }
 
-    public function testRemovesDetails()
+    public function testRemovesDetails(): void
     {
         $activity = activity()
             ->on($this->user)
@@ -150,6 +151,26 @@ class ActivityResourceTest extends TestCase
 
         $this->assertEquals(
             ['Removed: Potato 2'],
+            $this->makeResource($activity)['details'],
+        );
+    }
+
+    public function testFormatsOthers(): void
+    {
+        $activity = activity()
+            ->on($this->user)
+            ->withProperties([
+                'arrayed' => [1, 2, 3],
+                'objected' => new stdClass(),
+                'reason' => 'There is a snake in my boot!',
+            ])
+            ->log('my description');
+
+        $this->assertEquals(
+            [
+                'Arrayed set to "1, 2, 3"',
+                'Reason set to "There is a snake in my boot!"'
+            ],
             $this->makeResource($activity)['details'],
         );
     }

@@ -50,25 +50,21 @@ class ActivityResource extends JsonResource
     {
         $details = [];
 
-        if ($this->propertyExists('attributes') === true) {
-            $this->attributeDetails($details);
-        }
+        foreach ($this->properties as $key => $values) {
+            if (empty($values) === true) {
+                continue;
+            }
 
-        if ($this->propertyExists('added') === true) {
-            $this->changeDetails($details, 'added');
-        }
-
-        if ($this->propertyExists('removed') === true) {
-            $this->changeDetails($details, 'removed');
+            match ($key) {
+                'added',
+                'removed' => $this->changeDetails($details, $key),
+                'attributes' => $this->attributeDetails($details),
+                'old' => null,
+                default => $this->otherDetails($details, $key, $values),
+            };
         }
 
         return $details;
-    }
-
-    protected function propertyExists(string $property): bool
-    {
-        return isset($this->properties[$property]) === true
-            && empty($this->properties[$property]) === false;
     }
 
     protected function changeDetails(array &$details, string $property): void
@@ -82,11 +78,25 @@ class ActivityResource extends JsonResource
             $detail = ucfirst(explode('.', $key, 2)[0]) . ' set to ' . $this->formatValue($value);
 
             if (isset($this->properties['old'][$key]) === true) {
-                $detail
-                    .= ' (changed from ' . $this->formatValue($this->properties['old'][$key]) . ')';
+                $detail .= ' (changed from ' . $this->formatValue($this->properties['old'][$key]) . ')';
             }
 
             $details[] = $detail;
+        }
+    }
+
+    protected function otherDetails(array &$details, string $key, mixed $value): void
+    {
+        $key = ucfirst($key);
+
+        $value = match (true) {
+            is_array($value) => implode(', ', $value),
+            is_object($value) => null,
+            default => $value,
+        };
+
+        if (empty($value) === false) {
+            $details[] = "$key set to \"$value\"";
         }
     }
 
