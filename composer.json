@@ -34,7 +34,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": "^8.3",
-        "anthonyedmonds/govuk-laravel": "^6",
+        "anthonyedmonds/govuk-laravel": "^7",
         "illuminate/support": "^12",
         "spatie/laravel-activitylog": "^4"
     },
