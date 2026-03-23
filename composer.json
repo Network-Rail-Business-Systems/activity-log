@@ -35,7 +35,7 @@
     "require": {
         "php": "^8.3",
         "anthonyedmonds/govuk-laravel": "^7",
-        "illuminate/support": "^12",
+        "illuminate/support": "^13",
         "spatie/laravel-activitylog": "^4"
     },
     "require-dev": {
@@ -44,7 +44,7 @@
         "larastan/larastan": "^3",
         "laravel/pint": "^1",
         "networkrailbusinesssystems/badges": "^1",
-        "orchestra/testbench": "^10",
+        "orchestra/testbench": "^11",
         "phpunit/phpunit": "^12"
     },
     "config": {
