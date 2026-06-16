@@ -42,7 +42,7 @@ class ActivityController extends Controller
             ->when(
                 in_array(SoftDeletes::class, class_uses($model)) === true,
                 function (Builder $query) {
-                    $query->withTrashed();
+                    $query->withTrashed(); /** @phpstan-ignore */
                 },
             )
             ->firstOrFail();
