@@ -21,40 +21,32 @@ class ActivitiesTest extends TestCase
         parent::setUp();
 
         $this->user = $this->signIn();
+
         activity()
             ->by($this->user)
             ->log('Toot');
 
         $this->controller = new ActivityController();
-        $this->response = $this->controller->activities($this->user->id, User::class);
+        $this->controller->id = $this->user->id;
+        $this->controller->class = User::class;
+
+        $this->response = $this->controller->activities();
     }
 
     public function testReturnsView(): void
     {
         $this->assertEquals('govuk-activity-log::activity', $this->response->getData()['content']);
-    }
 
-    public function testWithActivities(): void
-    {
         $this->assertEquals(
             ActivityCollection::make($this->user->activities)
                 ->toArray(request()),
             $this->response->getData()['activities'],
         );
-    }
 
-    public function testWithBack(): void
-    {
         $this->assertEquals(route('admin.users.show', $this->user), $this->response->getData()['back']);
-    }
 
-    public function testWithSubject(): void
-    {
         $this->assertEquals($this->user->id, $this->response->getData()['subject']->id);
-    }
 
-    public function testWithTitle(): void
-    {
         $this->assertEquals(
             "Activity log of {$this->user->name}",
             $this->response->getData()['title'],
