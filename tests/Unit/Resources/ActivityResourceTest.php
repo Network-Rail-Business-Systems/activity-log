@@ -175,6 +175,36 @@ class ActivityResourceTest extends TestCase
         );
     }
 
+    public function testFormatsNestedJsonValues(): void
+    {
+        $activity = activity()
+            ->on($this->user)
+            ->withProperties([
+                'attributes' => [
+                    'user' => json_encode([
+                        'id' => 18,
+                        'name' => 'Test User',
+                        'created_at' => '2024-12-16T16:45:25Z',
+                        'deleted_at' => null,
+                        'roles' => [
+                            [
+                                'id' => 3,
+                                'name' => 'Support',
+                            ],
+                        ],
+                    ]),
+                ],
+            ])
+            ->log('my description');
+
+        $this->assertEquals(
+            [
+                'User set to id: 18, name: Test User, created_at: 16/12/2024 16:45, deleted_at: none, roles: id: 3, name: Support',
+            ],
+            $this->makeResource($activity)['details'],
+        );
+    }
+
     protected function makeResource(Activity $activity): array
     {
         $resource = new ActivityResource($activity);

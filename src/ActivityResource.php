@@ -109,6 +109,13 @@ class ActivityResource extends JsonResource
 
     protected function formatValue(mixed $value): string
     {
+        if (
+            is_string($value) === true
+            && json_validate($value) === true
+        ) {
+            $value = json_decode($value, true);
+        }
+
         if ($value === null) {
             return 'none';
         }
@@ -142,7 +149,7 @@ class ActivityResource extends JsonResource
 
             $line .= is_array($value) === true
                 ? $this->formatArray($value)
-                : $value;
+                : $this->formatValue($value);
 
             $output[] = $line;
         }
