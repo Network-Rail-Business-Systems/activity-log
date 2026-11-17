@@ -3,6 +3,7 @@
 namespace NetworkRailBusinessSystems\ActivityLog;
 
 use Carbon\Carbon;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Support\Str;
@@ -109,13 +110,6 @@ class ActivityResource extends JsonResource
 
     protected function formatValue(mixed $value): string
     {
-        if (
-            is_string($value) === true
-            && json_validate($value) === true
-        ) {
-            $value = json_decode($value, true);
-        }
-
         if ($value === null) {
             return 'none';
         }
@@ -132,7 +126,11 @@ class ActivityResource extends JsonResource
             str_contains($value, 'T') === true
             && str_contains($value, 'Z') === true
         ) {
-            return Carbon::parse($value)->format('d/m/Y H:i');
+            try {
+                $value = Carbon::parse($value)->format('d/m/Y H:i');
+            } catch (Exception) {
+                return $value;
+            }
         }
 
         return $value;
@@ -149,7 +147,7 @@ class ActivityResource extends JsonResource
 
             $line .= is_array($value) === true
                 ? $this->formatArray($value)
-                : $this->formatValue($value);
+                : $value;
 
             $output[] = $line;
         }
