@@ -175,31 +175,22 @@ class ActivityResourceTest extends TestCase
         );
     }
 
-    public function testFormatsNestedJsonValues(): void
+    public function testDoesNotFormatInvalidDate(): void
     {
+        $date = '{"created_at":"0000-00-00T00:00:00Z"}';
+
         $activity = activity()
             ->on($this->user)
             ->withProperties([
                 'attributes' => [
-                    'user' => json_encode([
-                        'id' => 18,
-                        'name' => 'Test User',
-                        'created_at' => '2024-12-16T16:45:25Z',
-                        'deleted_at' => null,
-                        'roles' => [
-                            [
-                                'id' => 3,
-                                'name' => 'Support',
-                            ],
-                        ],
-                    ]),
+                    'created' => $date,
                 ],
             ])
             ->log('my description');
 
         $this->assertEquals(
             [
-                'User set to id: 18, name: Test User, created_at: 16/12/2024 16:45, deleted_at: none, roles: id: 3, name: Support',
+                "Created set to $date",
             ],
             $this->makeResource($activity)['details'],
         );
