@@ -175,6 +175,27 @@ class ActivityResourceTest extends TestCase
         );
     }
 
+    public function testDoesNotFormatInvalidDate(): void
+    {
+        $date = '{"created_at":"0000-00-00T00:00:00Z"}';
+
+        $activity = activity()
+            ->on($this->user)
+            ->withProperties([
+                'attributes' => [
+                    'created' => $date,
+                ],
+            ])
+            ->log('my description');
+
+        $this->assertEquals(
+            [
+                "Created set to $date",
+            ],
+            $this->makeResource($activity)['details'],
+        );
+    }
+
     protected function makeResource(Activity $activity): array
     {
         $resource = new ActivityResource($activity);

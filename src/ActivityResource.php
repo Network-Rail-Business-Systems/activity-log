@@ -3,6 +3,7 @@
 namespace NetworkRailBusinessSystems\ActivityLog;
 
 use Carbon\Carbon;
+use Carbon\Exceptions\InvalidFormatException;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Support\Str;
@@ -125,7 +126,11 @@ class ActivityResource extends JsonResource
             str_contains($value, 'T') === true
             && str_contains($value, 'Z') === true
         ) {
-            return Carbon::parse($value)->format('d/m/Y H:i');
+            try {
+                $value = Carbon::parse($value)->format('d/m/Y H:i');
+            } catch (InvalidFormatException $exception) {
+                //
+            }
         }
 
         return $value;
