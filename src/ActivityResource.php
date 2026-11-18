@@ -128,8 +128,8 @@ class ActivityResource extends JsonResource
         ) {
             try {
                 $value = Carbon::parse($value)->format('d/m/Y H:i');
-            } catch (InvalidFormatException) {
-                return $value;
+            } catch (InvalidFormatException $exception) {
+                //
             }
         }
 
